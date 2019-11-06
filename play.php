@@ -14,10 +14,14 @@
 		include "inc/Game.php";
 		include 'inc/Phrase.php';
 
-		$game = new Game;
+		$game = new Game($phraseObject);
+		echo "<pre>";
 		var_dump($game);
+		echo "</pre>";
+		echo "<pre>";
 		$phrase = new Phrase;
 		var_dump($phrase);
+		echo "</pre>";
 	?>
 	<div class="main-container">
 			<div id="banner" class="section">
