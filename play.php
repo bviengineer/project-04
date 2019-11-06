@@ -13,9 +13,11 @@
 	<?php // play.php to handle the HTML, instantiating objects, storing sessions and calling appropriate methods 
 		include "inc/Game.php";
 		include 'inc/Phrase.php';
-		
+
 		$game = new Game;
+		var_dump($game);
 		$phrase = new Phrase;
+		var_dump($phrase);
 	?>
 	<div class="main-container">
 			<div id="banner" class="section">
