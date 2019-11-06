@@ -15,6 +15,6 @@
         <h2 class="header">Phrase Hunter</h2>
     </div>
 </div>
-
+<?php // play.php to handle the HTML, instantiating objects, storing sessions and calling appropriate methods ?>
 </body>
 </html>
