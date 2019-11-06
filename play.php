@@ -15,7 +15,7 @@
 		include 'inc/Phrase.php';
 
 		echo "<pre>";
-		$phrase = new Phrase;
+		$phrase = new Phrase();
 		var_dump($phrase);
 		echo "</pre>";
 
