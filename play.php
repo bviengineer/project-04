@@ -10,11 +10,17 @@
 </head>
 
 <body>
-<div class="main-container">
-    <div id="banner" class="section">
-        <h2 class="header">Phrase Hunter</h2>
-    </div>
-</div>
-<?php // play.php to handle the HTML, instantiating objects, storing sessions and calling appropriate methods ?>
+	<?php // play.php to handle the HTML, instantiating objects, storing sessions and calling appropriate methods 
+		include "inc/Game.php";
+		include 'inc/Phrase.php';
+		
+		$game = new Game;
+		$phrase = new Phrase;
+	?>
+	<div class="main-container">
+			<div id="banner" class="section">
+					<h2 class="header">Phrase Hunter</h2>
+			</div>
+	</div>
 </body>
 </html>
