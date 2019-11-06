@@ -6,7 +6,7 @@ class Game
 	private $phrase;
 	private $lives = 5;
 
-	public function __construct($object) {
-		$this->phrase = $object;
+	public function __construct($phraseObject) {
+		$this->phrase = $phraseObject;
 	}
 }
