@@ -1,2 +1,2 @@
 <?php
-// play.php to handle the HTML, instantiating objects, storing sessions and calling appropriate methods
+// Phrase.php to create a Phrase class to handle the phrases
