@@ -27,9 +27,14 @@
 				// echo "<pre>";
 				// var_dump($game);
 				// echo "</pre>";
-				echo $game->displayKeyboard();
-				var_dump($_POST);
-			?>    
+			?>
+				<form method='POST' action='play.php'>
+					<?php
+						echo $game->displayKeyboard();
+						echo "<br>";
+						var_dump($_POST);
+					?>
+				</form>
 		</div>
 	</body>
 </html>
