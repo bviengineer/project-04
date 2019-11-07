@@ -14,5 +14,9 @@ class Phrase
 			//$this->currentPhrase = "Australia is known as the land Down Under";
 		//}
 	}
+	// Adds letter placeholders to the display when game begins
+	public function addPhraseToDisplay() {
+		
+	}
 
 }
