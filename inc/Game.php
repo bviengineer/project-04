@@ -60,7 +60,7 @@ class Game
 		return $this->html;
 	}
 
-	public funciton displayScore() {
-		
+	public function displayScore() {
+
 	}
 }
