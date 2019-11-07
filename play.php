@@ -14,8 +14,9 @@
 		include "inc/Game.php";
 		include 'inc/Phrase.php';
 
-		echo "<pre>";
-		// $phrase = new Phrase();
+		
+		$phrase = new Phrase();
+		// echo "<pre>";
 		// var_dump($phrase);
 		// echo "</pre>";
 
