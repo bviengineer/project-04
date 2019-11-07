@@ -5,49 +5,59 @@ class Game
 {
 	private $phrase;
 	private $lives = 5;
+	private $html; // keybord characters 
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
 	}
 
 	public function displayKeyboard() {
-		echo "<form>";
-		echo "<div id='qwerty' class='section'>";
-    echo "<div class='keyrow'>";
-		echo "<button class='key'>q</button>";
-		echo "<button class='key'>w</button>";
-		echo "<button class='key'>e</button>";
-		echo "<button class='key'>r</button>";
-		echo "<button class='key' style='background-color: red' disabled>t</button>";
-		echo "<button class='key'>y</button>";
-		echo "<button class='key'>u</button>";
-		echo "<button class='key'>i</button>";
-		echo "<button class='key'>o</button>";
-		echo "<button class='key'>p</button>";
-    echo "</div>";
+		$this->html = "<form>";
+		$this->html .= "<div id='qwerty' class='section'>";
+    $this->html .= "<div class='keyrow'>";
+		$this->html .= "<button class='key'>q</button>";
+		$this->html .= "<button class='key'>w</button>";
+		$this->html .= "<button class='key'>e</button>";
+		$this->html .= "<button class='key'>r</button>";
+		$this->html .= "<button class='key' style='background-color: red' disabled>t</button>";
+		$this->html .= "<button class='key'>y</button>";
+		$this->html .= "<button class='key'>u</button>";
+		$this->html .= "<button class='key'>i</button>";
+		$this->html .= "<button class='key'>o</button>";
+		$this->html .= "<button class='key'>p</button>";
+		$this->html .= "</div>";
 
-    echo "<div class='keyrow'>";
-		echo "<button class='key'>a</button>";
-		echo "<button class='key'>s</button>";
-		echo "<button class='key'>d</button>";
-		echo "<button class='key'>f</button>";
-		echo "<button class='key'>g</button>";
-		echo "<button class='key'>h</button>";
-		echo "<button class='key'>j</button>";
-		echo "<button class='key'>k</button>";
-		echo "<button class='key'>l</button>";
-    echo "</div>";
+		$this->html .= "<div class='keyrow'>";
+		$this->html .= "<button class='key'>a</button>";
+		$this->html .= "<button class='key'>s</button>";
+		$this->html .= "<button class='key'>d</button>";
+		$this->html .= "<button class='key'>f</button>";
+		$this->html .= "<button class='key'>g</button>";
+		$this->html .= "<button class='key'>h</button>";
+		$this->html .= "<button class='key'>j</button>";
+		$this->html .= "<button class='key'>k</button>";
+		$this->html .= "<button class='key'>l</button>";
+		$this->html .= "</div>";
 
-    echo "<div class='keyrow'>";
-		echo "<button class='key'>z</button>";
-		echo "<button class='key'>x</button>";
-		echo "<button class='key'>c</button>";
-		echo "<button class='key'>v</button>";
-		echo "<button class='key'>b</button>";
-		echo "<button class='key'>n</button>";
-		echo "<button class='key'>m</button>";
-    echo "</div>";
-		echo "</div>";
-		echo "</form>";
+		$this->html .= "<div class='keyrow'>";
+		$this->html .= "<button class='key'>z</button>";
+		$this->html .= "<button class='key'>x</button>";
+		$this->html .= "<button class='key'>c</button>";
+		$this->html .= "<button class='key'>v</button>";
+		$this->html .= "<button class='key'>b</button>";
+		$this->html .= "<button class='key'>n</button>";
+		$this->html .= "<button class='key'>m</button>";
+		$this->html .= "</div>";
+		$this->html .= "</div>";
+		$this->html .= "</form>";
+		$this->html .= "<form>";
+		$this->html .= "<div id='qwerty' class='section'>";
+		$this->html .= "<div class='keyrow'>";
+		$this->html .= "<button class='key'>q</button>";
+		$this->html .= "<button class='key'>w</button>";
+		$this->html .= "<button class='key'>e</button>";
+		$this->html .= "<button class='key'>r</button>";
+
+		return $this->html;
 	}
 }
