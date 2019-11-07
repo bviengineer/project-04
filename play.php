@@ -15,14 +15,14 @@
 		include 'inc/Phrase.php';
 
 		echo "<pre>";
-		$phrase = new Phrase();
-		var_dump($phrase);
-		echo "</pre>";
+		// $phrase = new Phrase();
+		// var_dump($phrase);
+		// echo "</pre>";
 
 		$game = new Game($phrase);
-		echo "<pre>";
-		var_dump($game);
-		echo "</pre>";
+		// echo "<pre>";
+		// var_dump($game);
+		// echo "</pre>";
 	?>
 	<div class="main-container">
 			<div id="banner" class="section">
