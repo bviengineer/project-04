@@ -10,25 +10,26 @@
 </head>
 
 <body>
-	<?php // play.php to handle the HTML, instantiating objects, storing sessions and calling appropriate methods 
-		include "inc/Game.php";
-		include 'inc/Phrase.php';
-
-		
-		$phrase = new Phrase();
-		// echo "<pre>";
-		// var_dump($phrase);
-		// echo "</pre>";
-
-		$game = new Game($phrase);
-		// echo "<pre>";
-		// var_dump($game);
-		// echo "</pre>";
-	?>
 	<div class="main-container">
 			<div id="banner" class="section">
 					<h2 class="header">Phrase Hunter</h2>
 			</div>
+			<?php // play.php to haxndle the HTML, instantiating objects, storing sessions and calling appropriate methods 
+				include "inc/Game.php";
+				include 'inc/Phrase.php';
+		
+				$phrase = new Phrase();
+				// echo "<pre>";
+				// var_dump($phrase);
+				// echo "</pre>";
+
+				echo $phrase->addPhraseToDisplay();
+
+				$game = new Game($phrase);
+				// echo "<pre>";
+				// var_dump($game);
+				// echo "</pre>";
+			?>
 	</div>
 </body>
 </html>
