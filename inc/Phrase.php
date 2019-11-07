@@ -7,16 +7,17 @@ class Phrase
 	private $selected = [];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
-		if (!empty($currentPhrase) && !empty($selected) ) {
+		if (!empty($currentPhrase) || !empty($selected) ) {
 			$this->currentPhrase = $currentPhrase;
 			$this->selected = $selected;
 		} 
-		if(!isset($currentPhrase) && !isset($selected)) {
+		if(!isset($currentPhrase) || !isset($selected)) {
 			$this->currentPhrase = "dream big";
 		}
 	}
 	// Adds letter placeholders to the display when game begins
 	public function addPhraseToDisplay() {
-
+		$characters = str_split(strtolower($this->currentPhrase));
+		return $characters;
 	}
 }
