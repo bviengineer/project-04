@@ -12,7 +12,7 @@ class Game
 	}
 
 	public function displayKeyboard() {
-		$this->html = "<form>";
+		//$this->html = "<form method='POST'>";
 		$this->html .= "<div id='qwerty' class='section'>";
     $this->html .= "<div class='keyrow'>";
 		$this->html .= "<button class='key'>q</button>";
@@ -49,16 +49,14 @@ class Game
 		$this->html .= "<button class='key'>m</button>";
 		$this->html .= "</div>";
 		
-		$this->html .= "</form>";
-		$this->html .= "<form>";
-		$this->html .= "<div id='qwerty' class='section'>";
 		$this->html .= "<div class='keyrow'>";
 		$this->html .= "<button class='key'>q</button>";
 		$this->html .= "<button class='key'>w</button>";
 		$this->html .= "<button class='key'>e</button>";
 		$this->html .= "<button class='key'>r</button>";
 		$this->html .= "</div>";
-		
+		$this->html .= "</div>"; //closing for id=qwerty
+
 		return $this->html;
 	}
 }
