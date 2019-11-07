@@ -3,20 +3,20 @@
 
 class Phrase 
 {
-	private $currentPhrase = "dream big"; //"Australia is known as the land Down Under";
+	private $currentPhrase; //= "dream big"; //"Australia is known as the land Down Under";
 	private $selected = [];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
-		if (!empty($currentPhrase) || !empty($selected) ) {
+		if (!empty($currentPhrase) && !empty($selected) ) {
 			$this->currentPhrase = $currentPhrase;
 			$this->selected = $selected;
-		} //elseif(empty($currentPhrase) && empty($selected)) {
-			//$this->currentPhrase = "Australia is known as the land Down Under";
-		//}
+		} 
+		if(!isset($currentPhrase) && !isset($selected)) {
+			$this->currentPhrase = "dream big";
+		}
 	}
 	// Adds letter placeholders to the display when game begins
 	public function addPhraseToDisplay() {
-		
-	}
 
+	}
 }
