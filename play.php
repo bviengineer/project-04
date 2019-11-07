@@ -27,6 +27,7 @@
 				// echo "<pre>";
 				// var_dump($game);
 				// echo "</pre>";
+				$game->displayKeyboard();
 			?>    
 		</div>
 	</body>
