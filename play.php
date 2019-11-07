@@ -33,6 +33,8 @@
 						echo $game->displayKeyboard();
 						echo "<br>";
 						var_dump($_POST);
+
+						echo $game->displayscore();
 					?>
 				</form>
 		</div>
