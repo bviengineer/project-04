@@ -48,7 +48,7 @@ class Game
 		$this->html .= "<button class='key'>n</button>";
 		$this->html .= "<button class='key'>m</button>";
 		$this->html .= "</div>";
-		$this->html .= "</div>";
+		
 		$this->html .= "</form>";
 		$this->html .= "<form>";
 		$this->html .= "<div id='qwerty' class='section'>";
@@ -57,7 +57,8 @@ class Game
 		$this->html .= "<button class='key'>w</button>";
 		$this->html .= "<button class='key'>e</button>";
 		$this->html .= "<button class='key'>r</button>";
-
+		$this->html .= "</div>";
+		
 		return $this->html;
 	}
 }
