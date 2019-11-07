@@ -9,4 +9,8 @@ class Game
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
 	}
+
+	public function displayKeyboard() {
+		
+	}
 }
