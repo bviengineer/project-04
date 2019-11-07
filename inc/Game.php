@@ -6,6 +6,7 @@ class Game
 	private $phrase;
 	private $lives = 5;
 	private $html; // keybord characters 
+	private $hearts; // visual game progress
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
@@ -61,6 +62,11 @@ class Game
 	}
 
 	public function displayScore() {
-
+		$this->hearts = "<div id='scoreboard' class='section'><ol>";
+		for($i = 0; $i <= $this->lives-1; $i++) {
+        $this->hearts .= "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
+		}
+		$this->hearts .= "</ol></div>";
+		return $this->hearts;
 	}
 }
