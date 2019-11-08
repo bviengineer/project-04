@@ -31,8 +31,9 @@ class Phrase
 		//return $character; returns only the last letter of the array as a string: "g"
 		//return $this->myPhrase;
 	}
-
+	// Check selected letter against the current phrase
 	public function checkLetter($letter) {
-		return array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
+		$parsedPhrase = array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
+		return in_array($letter, $parsedPhrase);
 	}
 }
