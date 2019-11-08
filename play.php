@@ -37,7 +37,7 @@
 				<form method='POST' action='play.php'>
 					<?php
 						echo $game->displayKeyboard();
-						echo "<br>";
+						//echo "<br>";
 						//var_dump($_POST);
 
 						// Will display the visual scoreboard 
