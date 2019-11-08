@@ -69,4 +69,8 @@ class Game
 		$this->hearts .= "</ol></div>";
 		return $this->hearts;
 	}
+
+	public function letterSelection($letterSelected) {
+		
+	}
 }
