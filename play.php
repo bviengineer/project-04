@@ -44,7 +44,7 @@
 				</form>
 				<?php 
 					// Will display the visual scoreboard 
-					echo $game->displayscore();
+					echo $game->displayScore();
 					// echo "<pre>";
 					// var_dump($game);
 					// echo "</pre>";
