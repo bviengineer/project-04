@@ -41,10 +41,12 @@
 						//var_dump($_POST);
 
 						// Will display the visual scoreboard 
-						echo $game->displayscore();
-						echo "<pre>";
-						var_dump($game);
-						echo "</pre>";
+						// echo $game->displayscore();
+						// echo "<pre>";
+						// var_dump($game);
+						// echo "</pre>";
+
+						var_dump($phrase->checkLetter('a'));
 					?>
 				</form>
 		</div>
