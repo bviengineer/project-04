@@ -1,8 +1,9 @@
 <?php 
-	session_start(); 
+	session_start();
 	$_SESSION['phrase'] = 'start small';
 	array_push($_SESSION['selected'], filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING));
-	//var_dump($_SESSION);
+	var_dump($_SESSION);
+	//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,17 +39,18 @@
 					<?php
 						echo $game->displayKeyboard();
 						//echo "<br>";
-						//var_dump($_POST);
-
-						// Will display the visual scoreboard 
-						echo $game->displayscore();
-						// echo "<pre>";
-						// var_dump($game);
-						// echo "</pre>";
-
-						var_dump($phrase->checkLetter('a'));
+						// var_dump($_POST);
 					?>
 				</form>
+				<?php 
+					// Will display the visual scoreboard 
+					echo $game->displayscore();
+					// echo "<pre>";
+					// var_dump($game);
+					// echo "</pre>";
+
+					//var_dump($phrase->checkLetter('a'));
+				?>
 		</div>
 	</body>
 </html>
