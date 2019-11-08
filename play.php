@@ -1,7 +1,7 @@
 <?php 
 	session_start(); 
 	$_SESSION['phrase'] = 'start small';
-	$_SESSION['selected'] = filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING);
+	array_push($_SESSION['selected'], filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING));
 	//var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
