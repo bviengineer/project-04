@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+	$_SESSION['phrase'] = 'start small';
+	$_SESSION['selected'] = filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING);
+	var_dump($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -33,9 +38,13 @@
 					<?php
 						echo $game->displayKeyboard();
 						echo "<br>";
-						var_dump($_POST);
+						//var_dump($_POST);
 
+						// Will display the visual scoreboard 
 						echo $game->displayscore();
+						// echo "<pre>";
+						// var_dump($game);
+						// echo "</pre>";
 					?>
 				</form>
 		</div>
