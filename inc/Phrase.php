@@ -33,6 +33,6 @@ class Phrase
 	}
 
 	public function checkLetter($letter) {
-		return array_unique(str_split(strtolower($this->currentPhrase)));
+		return array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
 	}
 }
