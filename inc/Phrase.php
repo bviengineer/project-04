@@ -1,6 +1,5 @@
 <?php
 // Phrase.php to create a Phrase class to handle the phrases
-
 class Phrase 
 {
 	private $currentPhrase; //= "dream big"; //"Australia is known as the land Down Under";
@@ -34,6 +33,6 @@ class Phrase
 	}
 
 	public function checkLetter($letter) {
-		
+		return array_unique(str_split($this->currentPhrase));
 	}
 }
