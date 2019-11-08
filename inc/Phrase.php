@@ -32,4 +32,8 @@ class Phrase
 		//return $character; returns only the last letter of the array as a string: "g"
 		//return $this->myPhrase;
 	}
+
+	public function checkLetter($letter) {
+		
+	}
 }
