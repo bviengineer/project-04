@@ -63,8 +63,13 @@ class Game
 	}
 
 	public function playerGuess($keyPress) {
-		// $letterClicked = $this->$_SESSION['selected'];
-		// return implode($letterClicked);
+		//$item = implode($keyPress);
+		//return get_object_vars($keyPress);
+		//return get_object_vars($this);
+		//return __CLASS__;
+		//return __METHOD__;
+		//return get_class_methods(__CLASS__);
+		//return $this[0];
 
 		return $keyPress;
 	}
