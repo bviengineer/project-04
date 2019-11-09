@@ -49,15 +49,7 @@ class Game
 		$this->chars .= "<button class='key' name='input' value='n'>n</button>";
 		$this->chars .= "<button class='key' name='input' value='m'>m</button>";
 		$this->chars .= "</div>";
-		
-		$this->chars .= "<div class='keyrow'>";
-		$this->chars .= "<button class='key' name='input' value='q'>q</button>";
-		$this->chars .= "<button class='key' name='input' value='w'>w</button>";
-		$this->chars .= "<button class='key' name='input' value='e'>e</button>";
-		$this->chars .= "<button class='key' name='input' value='r'>r</button>";
-		$this->chars .= "</div>";
 		$this->chars .= "</div>"; //closing for id=qwerty
-
 		return $this->chars;
 	}
 
@@ -70,7 +62,10 @@ class Game
 		return $this->hearts;
 	}
 
-	public function letterSelection($letterSelected) {
-		
+	public function playerGuess($keyPress) {
+		// $letterClicked = $this->$_SESSION['selected'];
+		// return implode($letterClicked);
+
+		return $keyPress;
 	}
 }
