@@ -71,6 +71,6 @@ class Game
 		//return get_class_methods(__CLASS__);
 		//return $this[0];
 
-		return $keyPress;
+		return $keyPress[count($keyPress)-1];
 	}
 }
