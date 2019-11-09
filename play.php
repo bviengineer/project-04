@@ -31,14 +31,14 @@
 			<?php 
 				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
 				// echo "<pre>";
-				// var_dump($phrase);
+				//var_dump($phrase);
 				// echo "</pre>";
 
 				echo $phrase->addPhraseToDisplay();
 
 				$game = new Game($phrase);
 				//echo "<pre>";
-				var_dump($game);
+				//var_dump($game);
 				//echo "</pre>";
 			?>
 				<form method='POST' action='play.php'>
@@ -55,7 +55,9 @@
 					// var_dump($game);
 					// echo "</pre>";
 
-					//var_dump($phrase->checkLetter('a'));
+					//var_dump($phrase->checkLetter('s'));
+					
+					var_dump($game->playerGuess($phrase));
 				?>
 		</div>
 	</body>
