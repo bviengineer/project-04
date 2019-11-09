@@ -37,9 +37,9 @@
 				echo $phrase->addPhraseToDisplay();
 
 				$game = new Game($phrase);
-				//echo "<pre>";
-				//var_dump($game);
-				//echo "</pre>";
+				// echo "<pre>";
+				// var_dump($game);
+				// echo "</pre>";
 			?>
 				<form method='POST' action='play.php'>
 					<?php
@@ -57,7 +57,9 @@
 
 					//var_dump($phrase->checkLetter('s'));
 					
-					var_dump($game->playerGuess($phrase));
+					// echo "<pre>";
+					var_dump($game->playerGuess($_SESSION['selected']));
+					// echo "</pre>";
 				?>
 		</div>
 	</body>
