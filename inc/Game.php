@@ -63,14 +63,8 @@ class Game
 	}
 
 	public function playerGuess($keyPress) {
-		//$item = implode($keyPress);
-		//return get_object_vars($keyPress);
-		//return get_object_vars($this);
-		//return __CLASS__;
-		//return __METHOD__;
-		//return get_class_methods(__CLASS__);
-		//return $this[0];
 
+		// Returns last key pressed by first counting the # of elements in the array & then subtracting 1 from the total count, since the array begins at index 0
 		return $keyPress[count($keyPress)-1];
 	}
 }
