@@ -55,11 +55,12 @@
 					// var_dump($game);
 					// echo "</pre>";
 
-					//var_dump($phrase->checkLetter('s'));
+					var_dump($phrase->checkLetter($game->playerGuess($_SESSION['selected'])));
 					
-					// echo "<pre>";
-					var_dump($game->playerGuess($_SESSION['selected']));
-					// echo "</pre>";
+					//var_dump($game->playerGuess($_SESSION['selected']));
+					//echo "<pre>";
+					//var_dump($game);
+					//echo "</pre>";
 				?>
 		</div>
 	</body>
