@@ -55,12 +55,13 @@
 					// var_dump($game);
 					// echo "</pre>";
 
-					var_dump($phrase->checkLetter($game->playerGuess($_SESSION['selected'])));
+					//Will check the letter pressed against the letters already selected & return true or false
+					//var_dump($phrase->checkLetter($game->playerGuess($_SESSION['selected'])));
 					
-					//var_dump($game->playerGuess($_SESSION['selected']));
-					//echo "<pre>";
-					//var_dump($game);
-					//echo "</pre>";
+					var_dump($game->playerGuess($_SESSION['selected']));
+					// echo "<pre>";
+					// var_dump($game);
+					// echo "</pre>";
 				?>
 		</div>
 	</body>
