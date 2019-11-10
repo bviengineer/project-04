@@ -65,6 +65,7 @@ class Game
 	public function playerGuess($keyPress) {
 
 		// Returns last key pressed by first counting the # of elements in the array & then subtracting 1 from the total count, since the array begins at index 0
-		return $keyPress[count($keyPress)-1];
+		$key = $keyPress[count($keyPress)-1];
+		return $key;
 	}
 }
