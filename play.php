@@ -44,24 +44,24 @@
 				<form method='POST' action='play.php'>
 					<?php
 						echo $game->displayKeyboard();
-						//echo "<br>";
-						//var_dump($_POST);
 					?>
 				</form>
 				<?php 
 					// Will display the visual scoreboard 
 					echo $game->displayScore();
-					// echo "<pre>";
-					// var_dump($game);
-					// echo "</pre>";
 
 					//Will check the letter pressed against the letters already selected & return true or false
 					//var_dump($phrase->checkLetter($game->playerGuess($_SESSION['selected'])));
 					
-					var_dump($game->playerGuess($_SESSION['selected']));
-					// echo "<pre>";
-					// var_dump($game);
-					// echo "</pre>";
+					$guess = $game->playerGuess($_SESSION['selected']);
+					//echo $guess;
+					
+					//Get values stored in priate property $selected on the Phrase class using __get()
+					$phraseArray = $phrase->selected;
+					//var_dump($phraseArray);
+
+					//Checks the letter the user selected is in the array of selected words
+					echo in_array($guess, $phraseArray);
 				?>
 		</div>
 	</body>
