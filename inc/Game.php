@@ -7,6 +7,7 @@ class Game
 	private $lives = 5;
 	private $chars; // keybord characters 
 	private $hearts; // visual game progress
+	public $value;
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
@@ -61,11 +62,14 @@ class Game
 		$this->hearts .= "</ol></div>";
 		return $this->hearts;
 	}
-
+	// Will get user selection 
 	public function playerGuess($keyPress) {
-
-		// Returns last key pressed by first counting the # of elements in the array & then subtracting 1 from the total count, since the array begins at index 0
+	// Returns last key pressed by first counting the # of elements in the array & then subtracting 1 from the total count, since the array begins at index 0
 		$key = $keyPress[count($keyPress)-1];
 		return $key;
+	}
+	// Will return the array of selections on the phrase object 
+	public function getSelectedFromPhrase($selectedArr) {
+		return $selectedArr;
 	}
 }
