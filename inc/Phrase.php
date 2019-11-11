@@ -37,7 +37,7 @@ class Phrase
 		return in_array($letter, $parsedPhrase);
 	}
 	//Will return the array of letter seletions 
-	public function getSelected() {
+	public function __get($selected) {
 		return $this->selected;
 	}
 }
