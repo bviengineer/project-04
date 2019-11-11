@@ -36,7 +36,7 @@ class Phrase
 		$parsedPhrase = array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
 		return in_array($letter, $parsedPhrase);
 	}
-	//Will return the array of letter seletions 
+	//Will return the array of letter seletions using the __get magic method 
 	public function __get($selected) {
 		return $this->selected;
 	}
