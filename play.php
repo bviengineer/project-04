@@ -55,13 +55,15 @@
 					echo $game->displayScore();
 
 					//Will check the letter pressed against the letters already selected & return true or false
-					//var_dump($phrase->checkLetter($_SESSION['selected']));
+					var_dump($phrase->checkLetter($_SESSION['selected']));
 					
 					//Returns values in the selected property of the Phrase class
 					//var_dump($game->playerGuess($_SESSION['selected']));				
 
 					echo "Looping through keyboard <br>";
 					$game->loopThroughKeyboard();
+					//var_dump($game->playerGuess($_SESSION['selected']));
+
 				?>
 		</div>
 	</body>
