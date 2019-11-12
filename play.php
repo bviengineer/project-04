@@ -45,14 +45,14 @@
 				<div id='qwerty' class='section'>
     			<!-- <div class='keyrow'> -->
 						<?php
-							//echo $game->displayKeyboard();
+							echo $game->displayKeyboard();
 						?>
 					<!-- </div> -->
 				</div>
 				</form>
 				<?php 
 					// Will display the visual scoreboard 
-					//echo $game->displayScore();
+					echo $game->displayScore();
 
 					//Will check the letter pressed against the letters already selected & return true or false
 					//var_dump($phrase->checkLetter($_SESSION['selected']));
