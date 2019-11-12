@@ -66,11 +66,12 @@ class Game
 		array_push($this->keyboard, $array);
 		
 		foreach ($this->keyboard as $key) {
-			if (in_array($key, $this->phrase->selected) ) {
-				echo "yeper, it's in there";
-			} else {
-					echo "nope, not it";
-			}
+		 if (in_array($key, $this->phrase->selected)) {
+					print_r($key);
+					//echo "yeper, it's there";
+			 } //else {
+			// 		echo "nope, not it";
+			// }
 		}
 	}
 }
