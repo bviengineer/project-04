@@ -14,9 +14,8 @@ class Game
 	}
 
 	public function displayKeyboard() {
-		//$this->html = "<form method='POST'>";
 		$this->chars .= "<div id='qwerty' class='section'>";
-    	$this->chars .= "<div class='keyrow'>";
+    $this->chars .= "<div class='keyrow'>";
 		$this->chars .= "<button class='key' name='input' value='q'>q</button>";
 		$this->chars .= "<button class='key' name='input' value='w'>w</button>";
 		$this->chars .= "<button class='key' name='input' value='e'>e</button>";
@@ -64,8 +63,11 @@ class Game
 	}
 	// Will get user selection 
 	public function playerGuess($keyPress) {
+		// function should actually accept a single key from the keyboard
+		// then check the keybord key against the array of letters in selected
+		// How to get a single key from the keyboard ?
 		$key = $keyPress[count($keyPress)-1];
 		$keyboard = $this->phrase->selected;
-		return $keyboard;
+		return $key;
 	}
 }
