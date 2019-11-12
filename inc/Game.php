@@ -9,50 +9,68 @@ class Game
 	private $hearts; // visual game progress
 	public $value;
 	private $top_row = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
-	private $middle_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
-	private $bottom_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+	private $middle_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+	private $bottom_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
 	// private $keyboard = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
 	}
 
+	// Prints keyboard to the page
 	public function displayKeyboard() {
-		//$this->chars .= "<div id='qwerty' class='section'>";
-    $this->chars .= "<div class='keyrow'>";
-		$this->chars .= "<button class='key' name='input' value='q'>q</button>";
-		$this->chars .= "<button class='key' name='input' value='w'>w</button>";
-		$this->chars .= "<button class='key' name='input' value='e'>e</button>";
-		$this->chars .= "<button class='key' name='input' value='r'>r</button>";
-		$this->chars .= "<button class='key' name='input' value='t' style='background-color: red' disabled>t</button>";
-		$this->chars .= "<button class='key' name='input' value='y'>y</button>";
-		$this->chars .= "<button class='key' name='input' value='u'>u</button>";
-		$this->chars .= "<button class='key' name='input' value='i'>i</button>";
-		$this->chars .= "<button class='key' name='input' value='o'>o</button>";
-		$this->chars .= "<button class='key' name='input' value='p'>p</button>";
+		$this->chars .= "<div class='keyrow'>";
+		foreach ($this->top_row as $f_row) {
+			$this->chars .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";	
+		}
 		$this->chars .= "</div>";
 
 		$this->chars .= "<div class='keyrow'>";
-		$this->chars .= "<button class='key' name='input' value='a'>a</button>";
-		$this->chars .= "<button class='key' name='input' value='s'>s</button>";
-		$this->chars .= "<button class='key' name='input' value='d'>d</button>";
-		$this->chars .= "<button class='key' name='input' value='f'>f</button>";
-		$this->chars .= "<button class='key' name='input' value='g'>g</button>";
-		$this->chars .= "<button class='key' name='input' value='h'>h</button>";
-		$this->chars .= "<button class='key' name='input' value='j'>j</button>";
-		$this->chars .= "<button class='key' name='input' value='k'>k</button>";
-		$this->chars .= "<button class='key' name='input' value='l'>l</button>";
+		foreach ($this->middle_row as $m_row) {
+			$this->chars .= "<button class='key' name='input' value='" . $m_row . "'>" . $m_row . "</button>";	
+		}
 		$this->chars .= "</div>";
 
 		$this->chars .= "<div class='keyrow'>";
-		$this->chars .= "<button class='key' name='input' value='z'>z</button>";
-		$this->chars .= "<button class='key' name='input' value='x'>x</button>";
-		$this->chars .= "<button class='key' name='input' value='c'>c</button>";
-		$this->chars .= "<button class='key' name='input' value='v'>v</button>";
-		$this->chars .= "<button class='key' name='input' value='b'>b</button>";
-		$this->chars .= "<button class='key' name='input' value='n'>n</button>";
-		$this->chars .= "<button class='key' name='input' value='m'>m</button>";
+		foreach ($this->bottom_row as $b_row) {
+			$this->chars .= "<button class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";	
+		}
 		$this->chars .= "</div>";
+
+    // $this->chars .= "<div class='keyrow'>";
+		// $this->chars .= "<button class='key' name='input' value='q'>q</button>";
+		// $this->chars .= "<button class='key' name='input' value='w'>w</button>";
+		// $this->chars .= "<button class='key' name='input' value='e'>e</button>";
+		// $this->chars .= "<button class='key' name='input' value='r'>r</button>";
+		// $this->chars .= "<button class='key' name='input' value='t' style='background-color: red' disabled>t</button>";
+		// $this->chars .= "<button class='key' name='input' value='y'>y</button>";
+		// $this->chars .= "<button class='key' name='input' value='u'>u</button>";
+		// $this->chars .= "<button class='key' name='input' value='i'>i</button>";
+		// $this->chars .= "<button class='key' name='input' value='o'>o</button>";
+		// $this->chars .= "<button class='key' name='input' value='p'>p</button>";
+		// $this->chars .= "</div>";
+
+		// $this->chars .= "<div class='keyrow'>";
+		// $this->chars .= "<button class='key' name='input' value='a'>a</button>";
+		// $this->chars .= "<button class='key' name='input' value='s'>s</button>";
+		// $this->chars .= "<button class='key' name='input' value='d'>d</button>";
+		// $this->chars .= "<button class='key' name='input' value='f'>f</button>";
+		// $this->chars .= "<button class='key' name='input' value='g'>g</button>";
+		// $this->chars .= "<button class='key' name='input' value='h'>h</button>";
+		// $this->chars .= "<button class='key' name='input' value='j'>j</button>";
+		// $this->chars .= "<button class='key' name='input' value='k'>k</button>";
+		// $this->chars .= "<button class='key' name='input' value='l'>l</button>";
+		// $this->chars .= "</div>";
+
+		// $this->chars .= "<div class='keyrow'>";
+		// $this->chars .= "<button class='key' name='input' value='z'>z</button>";
+		// $this->chars .= "<button class='key' name='input' value='x'>x</button>";
+		// $this->chars .= "<button class='key' name='input' value='c'>c</button>";
+		// $this->chars .= "<button class='key' name='input' value='v'>v</button>";
+		// $this->chars .= "<button class='key' name='input' value='b'>b</button>";
+		// $this->chars .= "<button class='key' name='input' value='n'>n</button>";
+		// $this->chars .= "<button class='key' name='input' value='m'>m</button>";
+		// $this->chars .= "</div>";
 		//$this->chars .= "</div>"; //closing for id=qwerty
 		return $this->chars;
 	}
