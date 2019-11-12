@@ -42,19 +42,26 @@
 				// echo "</pre>";
 			?>
 				<form method='POST' action='play.php'>
-					<?php
-						echo $game->displayKeyboard();
-					?>
+				<div id='qwerty' class='section'>
+    			<!-- <div class='keyrow'> -->
+						<?php
+							//echo $game->displayKeyboard();
+						?>
+					<!-- </div> -->
+				</div>
 				</form>
 				<?php 
 					// Will display the visual scoreboard 
-					echo $game->displayScore();
+					//echo $game->displayScore();
 
 					//Will check the letter pressed against the letters already selected & return true or false
 					//var_dump($phrase->checkLetter($_SESSION['selected']));
 					
 					//Returns values in the selected property of the Phrase class
-					var_dump($game->playerGuess($_SESSION['selected']));				
+					//var_dump($game->playerGuess($_SESSION['selected']));				
+
+					echo "Looping through keyboard <br>";
+					$game->loopThroughKeyboard();
 				?>
 		</div>
 	</body>
