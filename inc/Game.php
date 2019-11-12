@@ -14,7 +14,7 @@ class Game
 	}
 
 	public function displayKeyboard() {
-		$this->chars .= "<div id='qwerty' class='section'>";
+		//$this->chars .= "<div id='qwerty' class='section'>";
     $this->chars .= "<div class='keyrow'>";
 		$this->chars .= "<button class='key' name='input' value='q'>q</button>";
 		$this->chars .= "<button class='key' name='input' value='w'>w</button>";
@@ -49,7 +49,7 @@ class Game
 		$this->chars .= "<button class='key' name='input' value='n'>n</button>";
 		$this->chars .= "<button class='key' name='input' value='m'>m</button>";
 		$this->chars .= "</div>";
-		$this->chars .= "</div>"; //closing for id=qwerty
+		//$this->chars .= "</div>"; //closing for id=qwerty
 		return $this->chars;
 	}
 
@@ -61,13 +61,21 @@ class Game
 		$this->hearts .= "</ol></div>";
 		return $this->hearts;
 	}
-	// Will get user selection 
+	// Will get user selection > method for handling each letter key, step #10 
 	public function playerGuess($keyPress) {
 		// function should actually accept a single key from the keyboard
 		// then check the keybord key against the array of letters in selected
 		// How to get a single key from the keyboard ?
-		$key = $keyPress[count($keyPress)-1];
-		$keyboard = $this->phrase->selected;
-		return $key;
+		$key = $keyPress[count($keyPress)-1]; // gets the most recent keypress 
+		$keyboard = $this->phrase->selected; // gets the array of letters in the selected property
+		return in_array($key, $keyboard);
+	}
+	public function loopThroughKeyboard() {
+		$keysArray = str_split($this->displayKeyboard());
+		// for($i = 1; $i <= $this->displayKeyboard(); $i++) {
+		// 	echo $i;
+		// }
+
+		return $keysArray;
 	}
 }
