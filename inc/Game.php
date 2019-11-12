@@ -8,7 +8,10 @@ class Game
 	private $chars; // keybord characters 
 	private $hearts; // visual game progress
 	public $value;
-	private $keyboard = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
+	private $top_row = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
+	private $middle_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
+	private $bottom_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
+	// private $keyboard = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
@@ -64,12 +67,10 @@ class Game
 	}
 	// Will get user selection > method for handling each letter key, step #10 
 	public function playerGuess($keyPress) {
-		// function should actually accept a single key from the keyboard
-		// then check the keybord key against the array of letters in selected
-		// How to get a single key from the keyboard ?
-		$key = $keyPress[count($keyPress)-1]; // gets the most recent keypress 
-		$keyboard = $this->phrase->selected; // gets the array of letters in the selected property
-		return in_array($key, $keyboard);
+		$selectedLetters = $this->phrase->selected; // gets the array of letters in the selected property
+		if (in_array($keyPress, $selectedLetters)) {
+
+		}
 	}
 	// Loop through array of keys
 	public function loopThroughKeyboard() {
