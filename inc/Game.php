@@ -52,6 +52,7 @@ class Game
 	// Will get user selection > method for handling each letter key, step #10 
 	public function playerGuess($keyPress) {
 		$selectedLetters = $this->phrase->selected; // gets the array of letters in the selected property
+		return $selectedLetters;
 		if (in_array($keyPress, $selectedLetters)) {
 
 		}
@@ -62,15 +63,13 @@ class Game
 		$row2 = implode($this->middle_row);
 		$row3 = implode($this->bottom_row);
 		$allrows = $row1 . $row2 . $row3;
-		$array = str_split($allrows);
-		array_push($this->keyboard, $array);
+		$keyboard = str_split($allrows);
 		
-		for ($i = 0; $i <= count($array)-1; $i++) {
-			 if (in_array($allrows[$i], $this->phrase->selected)) {
-						//print_r($value);
-						echo "<br>" . $allrows[$i] . " yeper, it's there";
+		for ($i = 0; $i <= count($keyboard)-1; $i++) {
+			 if (in_array($keyboard[$i], $this->phrase->selected)) {
+						echo "<br>" . $keyboard[$i] . " yeper, it's there";
 			 } else {
-					echo "<br>" . $allrows[$i] . " nope, not in it";
+					echo "<br>" . $keyboard[$i] . " nope, not in it";
 			}
 		}
 	}
