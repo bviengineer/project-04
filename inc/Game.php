@@ -8,6 +8,7 @@ class Game
 	private $chars; // keybord characters 
 	private $hearts; // visual game progress
 	public $value;
+	private $keyboard = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
@@ -70,12 +71,10 @@ class Game
 		$keyboard = $this->phrase->selected; // gets the array of letters in the selected property
 		return in_array($key, $keyboard);
 	}
+	// Loop through array of keys
 	public function loopThroughKeyboard() {
-		$keysArray = str_split($this->displayKeyboard());
-		// for($i = 1; $i <= $this->displayKeyboard(); $i++) {
-		// 	echo $i;
-		// }
-
-		return $keysArray;
+		foreach ($this->keyboard as $key) {
+			echo "<br>" . $key;
+		}
 	}
 }
