@@ -65,13 +65,13 @@ class Game
 		$array = str_split($allrows);
 		array_push($this->keyboard, $array);
 		
-		foreach ($this->keyboard as $key) {
-		 if (in_array($key, $this->phrase->selected)) {
-					print_r($key);
-					//echo "yeper, it's there";
-			 } //else {
-			// 		echo "nope, not it";
-			// }
+		for ($i = 0; $i <= count($array)-1; $i++) {
+			 if (in_array($allrows[$i], $this->phrase->selected)) {
+						//print_r($value);
+						echo "<br>" . $allrows[$i] . " yeper, it's there";
+			 } else {
+					echo "<br>" . $allrows[$i] . " nope, not in it";
+			}
 		}
 	}
 }
