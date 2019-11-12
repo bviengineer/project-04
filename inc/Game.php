@@ -63,7 +63,9 @@ class Game
 		return $this->hearts;
 	}
 	// Will get user selection 
-	public function playerGuess() {
-		return $this->phrase->selected;
+	public function playerGuess($keyPress) {
+		$key = $keyPress[count($keyPress)-1];
+		$keyboard = $this->phrase->selected;
+		return $keyboard;
 	}
 }
