@@ -52,9 +52,9 @@ class Game
 	// Will get user selection > method for handling each letter key, step #10 
 	public function playerGuess($keyPress) {
 		$selectedLetters = $this->phrase->selected; // gets the array of letters in the selected property
-		return $selectedLetters;
+		// return $selectedLetters;
 		if (in_array($keyPress, $selectedLetters)) {
-
+			//code here 
 		}
 	}
 	// Loop through array of keys
