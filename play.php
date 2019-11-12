@@ -54,7 +54,7 @@
 					//var_dump($phrase->checkLetter($game->playerGuess($_SESSION['selected'])));
 					
 					//Returns values in the selected property of the Phrase class
-					var_dump($game->playerGuess());				
+					var_dump($game->playerGuess($_SESSION['selected']));				
 				?>
 		</div>
 	</body>
