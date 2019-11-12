@@ -11,7 +11,7 @@ class Game
 	private $top_row = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
 	private $middle_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 	private $bottom_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
-	// private $keyboard = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'];
+	private $keyboard = [];
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
@@ -37,41 +37,7 @@ class Game
 		}
 		$this->chars .= "</div>";
 
-    // $this->chars .= "<div class='keyrow'>";
-		// $this->chars .= "<button class='key' name='input' value='q'>q</button>";
-		// $this->chars .= "<button class='key' name='input' value='w'>w</button>";
-		// $this->chars .= "<button class='key' name='input' value='e'>e</button>";
-		// $this->chars .= "<button class='key' name='input' value='r'>r</button>";
 		// $this->chars .= "<button class='key' name='input' value='t' style='background-color: red' disabled>t</button>";
-		// $this->chars .= "<button class='key' name='input' value='y'>y</button>";
-		// $this->chars .= "<button class='key' name='input' value='u'>u</button>";
-		// $this->chars .= "<button class='key' name='input' value='i'>i</button>";
-		// $this->chars .= "<button class='key' name='input' value='o'>o</button>";
-		// $this->chars .= "<button class='key' name='input' value='p'>p</button>";
-		// $this->chars .= "</div>";
-
-		// $this->chars .= "<div class='keyrow'>";
-		// $this->chars .= "<button class='key' name='input' value='a'>a</button>";
-		// $this->chars .= "<button class='key' name='input' value='s'>s</button>";
-		// $this->chars .= "<button class='key' name='input' value='d'>d</button>";
-		// $this->chars .= "<button class='key' name='input' value='f'>f</button>";
-		// $this->chars .= "<button class='key' name='input' value='g'>g</button>";
-		// $this->chars .= "<button class='key' name='input' value='h'>h</button>";
-		// $this->chars .= "<button class='key' name='input' value='j'>j</button>";
-		// $this->chars .= "<button class='key' name='input' value='k'>k</button>";
-		// $this->chars .= "<button class='key' name='input' value='l'>l</button>";
-		// $this->chars .= "</div>";
-
-		// $this->chars .= "<div class='keyrow'>";
-		// $this->chars .= "<button class='key' name='input' value='z'>z</button>";
-		// $this->chars .= "<button class='key' name='input' value='x'>x</button>";
-		// $this->chars .= "<button class='key' name='input' value='c'>c</button>";
-		// $this->chars .= "<button class='key' name='input' value='v'>v</button>";
-		// $this->chars .= "<button class='key' name='input' value='b'>b</button>";
-		// $this->chars .= "<button class='key' name='input' value='n'>n</button>";
-		// $this->chars .= "<button class='key' name='input' value='m'>m</button>";
-		// $this->chars .= "</div>";
-		//$this->chars .= "</div>"; //closing for id=qwerty
 		return $this->chars;
 	}
 
@@ -92,8 +58,19 @@ class Game
 	}
 	// Loop through array of keys
 	public function loopThroughKeyboard() {
+		$row1 = implode($this->top_row);
+		$row2 = implode($this->middle_row);
+		$row3 = implode($this->bottom_row);
+		$allrows = $row1 . $row2 . $row3;
+		$array = str_split($allrows);
+		array_push($this->keyboard, $array);
+		
 		foreach ($this->keyboard as $key) {
-			echo "<br>" . $key;
+			if (in_array($key, $this->phrase->selected) ) {
+				echo "yeper, it's in there";
+			} else {
+					echo "nope, not it";
+			}
 		}
 	}
 }
