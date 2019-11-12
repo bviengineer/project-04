@@ -63,10 +63,8 @@ class Game
 		return $this->hearts;
 	}
 	// Will get user selection 
-	public function playerGuess($keyPress) {
-	// Returns last key pressed by first counting the # of elements in the array & then subtracting 1 from the total count, since the array begins at index 0
-		$key = $keyPress[count($keyPress)-1];
-		return $key;
+	public function playerGuess() {
+		return $this->phrase->selected;
 	}
 	// Will return the array of selections on the phrase object 
 	public function getSelectedFromPhrase($selectedArr) {
