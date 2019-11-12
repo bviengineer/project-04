@@ -66,8 +66,4 @@ class Game
 	public function playerGuess() {
 		return $this->phrase->selected;
 	}
-	// Will return the array of selections on the phrase object 
-	public function getSelectedFromPhrase($selectedArr) {
-		return $selectedArr;
-	}
 }
