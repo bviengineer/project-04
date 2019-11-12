@@ -53,15 +53,8 @@
 					//Will check the letter pressed against the letters already selected & return true or false
 					//var_dump($phrase->checkLetter($game->playerGuess($_SESSION['selected'])));
 					
-					$guess = $game->playerGuess($_SESSION['selected']);
-					//echo $guess;
-					
-					//Get values stored in priate property $selected on the Phrase class using __get()
-					$phraseArray = $phrase->selected;
-					//var_dump($phraseArray);
-
-					//Checks the letter the user selected is in the array of selected words
-					echo in_array($guess, $phraseArray);
+					//Returns values in the selected property of the Phrase class
+					var_dump($game->playerGuess());				
 				?>
 		</div>
 	</body>
