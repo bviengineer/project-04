@@ -7,8 +7,11 @@ class Phrase
 	private $myPhrase; // holds return string from addPhraseToDisplay()
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
-		if (!empty($currentPhrase) || !empty($selected) ) {
+		if (!empty($currentPhrase)) {
 			$this->currentPhrase = $currentPhrase;
+			$this->selected = $selected;
+		}
+		if (!empty($selected)) {
 			$this->selected = $selected;
 		} 
 		if(!isset($currentPhrase) || !isset($selected)) {
