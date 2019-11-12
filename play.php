@@ -61,7 +61,7 @@
 					//var_dump($game->playerGuess($_SESSION['selected']));				
 
 					echo "Looping through keyboard <br>";
-					$game->loopThroughKeyboard();
+					var_dump($game->loopThroughKeyboard());
 				?>
 		</div>
 	</body>
