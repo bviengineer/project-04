@@ -51,7 +51,7 @@ class Game
 		return $this->hearts;
 	}
 	// Will get user selection > method for handling each letter key, step #10 
-	public function playerGuess($keyPress) {
+	public function keyboard($keyPress) {
 		$selectedLetters = $this->phrase->selected; // gets the array of letters in the selected property
 		// return $selectedLetters;
 		if (in_array($keyPress, $selectedLetters)) {
