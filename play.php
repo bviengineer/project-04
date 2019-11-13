@@ -52,10 +52,9 @@
 					//var_dump($phrase->checkLetter($_SESSION['selected']));
 					
 					//Returns values in the selected property of the Phrase class
-					$game->keyboard($game->loopThroughKeyboard());
-
-					//echo "Looping through keyboard <br>";
-					//$game->loopThroughKeyboard();
+					echo "<pre>";
+					$game->keyboard();
+					echo "</pre>";
 				?>
 		</div>
 	</body>
