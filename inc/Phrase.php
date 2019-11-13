@@ -4,7 +4,6 @@ class Phrase
 {
 	private $currentPhrase = "dream big"; //"Australia is known as the land Down Under";
 	private $selected = [];
-	private $myPhrase; // holds return string from addPhraseToDisplay()
 	private $randomPhrase = [
 		"Empty vessels make the most noise",
 		"Birds of a feather flock together",
@@ -21,25 +20,23 @@ class Phrase
 		if (!empty($selected)) {
 			$this->selected = $selected;
 		} 
-		// if(!isset($currentPhrase) || !isset($selected)) {
+		// if(!isset($currentPhrase)) {
 		// 	$this->currentPhrase = "dream big";
 		// }
 	}
-	// Add a phrase to guess to the page as blank squares
+	// Add the phrase to be guessed to the page as blank squares
 	public function addPhraseToDisplay() {
-		$characters = str_split(strtolower($this->currentPhrase));
-		echo "<ul>";
-			foreach ($characters as $character) {
-				$this->myPhrase .= $character;
-				if ($character == " ") {
-					echo "<li class='space'>" . $character . "</li>";
+		$phraseToGuess = str_split(strtolower($this->currentPhrase));
+		$phraseDisplay = "<ul>";
+			foreach ($phraseToGuess as $thePhrase) {
+				if ($thePhrase == " ") {
+						$phraseDisplay .= "<li class='space'>" . $thePhrase . "</li>";
 				} else {
-					echo "<li class='hide letter'>" . $character . "</li>";
+						$phraseDisplay .= "<li class='hide letter'>" . $thePhrase . "</li>";
 				}
 			}
-		echo "</ul>";
-		//return $character; returns only the last letter of the array as a string: "g"
-		//return $this->myPhrase;
+		$phraseDisplay .= "</ul>";
+		return $phraseDisplay;
 	}
 	// Check selected letter against the current phrase
 	public function checkLetter($letter) {
