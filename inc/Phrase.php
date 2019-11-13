@@ -2,7 +2,7 @@
 // Phrase.php to create a Phrase class to handle the phrases
 class Phrase 
 {
-	private $currentPhrase; //= "dream big"; //"Australia is known as the land Down Under";
+	private $currentPhrase = "dream big"; //"Australia is known as the land Down Under";
 	private $selected = [];
 	private $myPhrase; // holds return string from addPhraseToDisplay()
 	private $randomPhrase = [
@@ -21,9 +21,9 @@ class Phrase
 		if (!empty($selected)) {
 			$this->selected = $selected;
 		} 
-		if(!isset($currentPhrase) || !isset($selected)) {
-			$this->currentPhrase = "dream big";
-		}
+		// if(!isset($currentPhrase) || !isset($selected)) {
+		// 	$this->currentPhrase = "dream big";
+		// }
 	}
 	// Adds letter placeholders to the display when game begins
 	public function addPhraseToDisplay() {
