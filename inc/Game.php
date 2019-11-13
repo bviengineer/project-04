@@ -50,12 +50,14 @@ class Game
 		$this->hearts .= "</ol></div>";
 		return $this->hearts;
 	}
-	// Will get user selection > method for handling each letter key, step #10 
-	public function keyboard($keyPress) {
-		$selectedLetters = $this->phrase->selected; // gets the array of letters in the selected property
-		// return $selectedLetters;
-		if (in_array($keyPress, $selectedLetters)) {
-			//code here 
+	// Check keyboard keys against the selected property 
+	public function keyboard($letterKey) {
+		$selectedLetters = $this->phrase->selected; // array of letters in the selected property
+	
+		if (in_array($letterKey, $selectedLetters)) {
+				echo "letter " . $letterKey . " is in the array"; 
+		} else {
+				echo $letterKey . " is not in the array";
 		}
 	}
 	// Loop through array of keys
@@ -67,11 +69,7 @@ class Game
 		$keyboard = str_split($allrows);
 		
 		for ($i = 0; $i <= count($keyboard)-1; $i++) {
-			 if (in_array($keyboard[$i], $this->phrase->selected)) {
-						echo "<br>" . $keyboard[$i] . " yeper, it's there";
-			 } else {
-					echo "<br>" . $keyboard[$i] . " nope, not in it";
-			}
+			 		echo $keyboard[$i];
 		}
 	}
 }
