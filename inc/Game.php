@@ -37,8 +37,6 @@ class Game
 			$this->keys .= "<button class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";	
 		}
 		$this->keys .= "</div>";
-
-		// $this->chars .= "<button class='key' name='input' value='t' style='background-color: red' disabled>t</button>";
 		return $this->keys;
 	}
 
@@ -62,10 +60,10 @@ class Game
 		foreach ($keyboard as $key) {
 			if (in_array($key, $selectedLetters) || !in_array($key, $selectedLetters)) {
 					if ($this->phrase->checkLetter($key) == true) {
-							echo $key . "<br>";
+							echo $key = "<button class='key correct' name='input' value='t' style='background-color: red' disabled>t</button>";
 					} 
 			} else {
-					echo $key . " is not in the array & not in the phrase<br>";
+				echo $key = "<button class='key incorrect' name='input' value='t' style='background-color: red' disabled>t</button>";
 			}
 		}
 	}
