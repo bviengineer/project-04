@@ -5,11 +5,18 @@ class Phrase
 	private $currentPhrase; //= "dream big"; //"Australia is known as the land Down Under";
 	private $selected = [];
 	private $myPhrase; // holds return string from addPhraseToDisplay()
+	private $randomPhrase = [
+		"Empty vessels make the most noise",
+		"Birds of a feather flock together",
+		"Do unto others as you would have them do unto you",
+		"The greatest servant is the greatest leader",
+		"Carry on",
+		"Make haste"
+	];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
 		if (!empty($currentPhrase)) {
 			$this->currentPhrase = $currentPhrase;
-			$this->selected = $selected;
 		}
 		if (!empty($selected)) {
 			$this->selected = $selected;
