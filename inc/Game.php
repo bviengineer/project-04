@@ -51,25 +51,20 @@ class Game
 		return $this->hearts;
 	}
 	// Check keyboard keys against the selected property 
-	public function keyboard($letterKey) {
+	public function keyboard() {
 		$selectedLetters = $this->phrase->selected; // array of letters in the selected property
-	
-		if (in_array($letterKey, $selectedLetters)) {
-				echo "letter " . $letterKey . " is in the array"; 
-		} else {
-				echo $letterKey . " is not in the array";
-		}
-	}
-	// Loop through array of keys
-	public function loopThroughKeyboard() {
 		$row1 = implode($this->top_row);
 		$row2 = implode($this->middle_row);
 		$row3 = implode($this->bottom_row);
 		$allrows = $row1 . $row2 . $row3;
 		$keyboard = str_split($allrows);
-		
-		for ($i = 0; $i <= count($keyboard)-1; $i++) {
-			 		echo $keyboard[$i];
+
+		foreach ($keyboard as $key) {
+			if (in_array($key, $selectedLetters)) {
+					echo "letter " . $key . " is in the array <br>"; 
+			} else {
+					echo $key . " is not in the array <br>";
+			}
 		}
 	}
 }
