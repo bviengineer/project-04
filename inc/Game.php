@@ -6,7 +6,7 @@ class Game
 	private $phrase;
 	private $lives = 5;
 	private $chars; // keybord characters 
-	private $hearts; // visual game progress
+	private $hearts; // visual game board
 	public $value;
 	private $top_row = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
 	private $middle_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
@@ -44,7 +44,7 @@ class Game
 
 	public function displayScore() {
 		$this->hearts = "<div id='scoreboard' class='section'><ol>";
-		for($i = 0; $i <= $this->lives-1; $i++) {
+		for ($i = 0; $i <= $this->lives-1; $i++) {
         	$this->hearts .= "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
 		}
 		$this->hearts .= "</ol></div>";
