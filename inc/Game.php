@@ -60,8 +60,10 @@ class Game
 		$keyboard = str_split($allrows);
 
 		foreach ($keyboard as $key) {
-			if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == true) {
-					echo "letter " . $key . " is in the array & in the phrase <br>"; 
+			if (in_array($key, $selectedLetters) || !in_array($key, $selectedLetters)) {
+					if ($this->phrase->checkLetter($key) == true) {
+							echo $key . "<br>";
+					} 
 			} else {
 					echo $key . " is not in the array & not in the phrase<br>";
 			}
