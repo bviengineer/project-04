@@ -6,9 +6,9 @@
 	include 'inc/Phrase.php';
 
 	if (isset($_SESSION['selected']) && isset($_POST['input'])) {
-		array_push($_SESSION['selected'], filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING));
+			array_push($_SESSION['selected'], filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING));
 	} else {
-		$_SESSION['selected'] = [];
+			$_SESSION['selected'] = [];
 	}
 	$_SESSION['phrase'] = 'start small';
 	//var_dump($_SESSION);
@@ -29,41 +29,33 @@
 		<div class="main-container">
 			<h2 class="header">Phrase Hunter</h2>
 			<?php 
+				// Instantiation of Phrase class
 				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
-				// echo "<pre>";
-				//var_dump($phrase);
-				// echo "</pre>";
 
 				echo $phrase->addPhraseToDisplay();
 
+				// Instantiation of Game class
 				$game = new Game($phrase);
-				// echo "<pre>";
-				// var_dump($game);
-				// echo "</pre>";
 			?>
-				<form method='POST' action='play.php'>
+			<form method='POST' action='play.php'>
 				<div id='qwerty' class='section'>
-    			<!-- <div class='keyrow'> -->
 						<?php
 							echo $game->displayKeyboard();
 						?>
-					<!-- </div> -->
 				</div>
-				</form>
+			</form>
 				<?php 
-					// Will display the visual scoreboard 
+					// Display the visual scoreboard 
 					echo $game->displayScore();
 
-					//Will check the letter pressed against the letters already selected & return true or false
-					var_dump($phrase->checkLetter($_SESSION['selected']));
+					// Check letter pressed against the letters selected & return true or false
+					//var_dump($phrase->checkLetter($_SESSION['selected']));
 					
 					//Returns values in the selected property of the Phrase class
-					//var_dump($game->playerGuess($_SESSION['selected']));				
+					$game->keyboard($game->loopThroughKeyboard());
 
-					echo "Looping through keyboard <br>";
-					$game->loopThroughKeyboard();
-					//var_dump($game->playerGuess($_SESSION['selected']));
-
+					//echo "Looping through keyboard <br>";
+					//$game->loopThroughKeyboard();
 				?>
 		</div>
 	</body>
