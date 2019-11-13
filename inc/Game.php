@@ -12,6 +12,7 @@ class Game
 	private $middle_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 	private $bottom_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
 	private $keyboard = [];
+	private $keys;
 
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
@@ -19,26 +20,26 @@ class Game
 
 	// Prints keyboard to the page
 	public function displayKeyboard() {
-		$this->chars .= "<div class='keyrow'>";
+		$this->keys .= "<div class='keyrow'>";
 		foreach ($this->top_row as $f_row) {
-			$this->chars .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";	
+			$this->keys .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";	
 		}
-		$this->chars .= "</div>";
+		$this->keys .= "</div>";
 
-		$this->chars .= "<div class='keyrow'>";
+		$this->keys .= "<div class='keyrow'>";
 		foreach ($this->middle_row as $m_row) {
-			$this->chars .= "<button class='key' name='input' value='" . $m_row . "'>" . $m_row . "</button>";	
+			$this->keys .= "<button class='key' name='input' value='" . $m_row . "'>" . $m_row . "</button>";	
 		}
-		$this->chars .= "</div>";
+		$this->keys .= "</div>";
 
-		$this->chars .= "<div class='keyrow'>";
+		$this->keys .= "<div class='keyrow'>";
 		foreach ($this->bottom_row as $b_row) {
-			$this->chars .= "<button class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";	
+			$this->keys .= "<button class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";	
 		}
-		$this->chars .= "</div>";
+		$this->keys .= "</div>";
 
 		// $this->chars .= "<button class='key' name='input' value='t' style='background-color: red' disabled>t</button>";
-		return $this->chars;
+		return $this->keys;
 	}
 
 	public function displayScore() {
