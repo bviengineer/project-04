@@ -49,11 +49,11 @@
 					echo $game->displayScore();
 
 					// Check letter pressed against the letters selected & return true or false
-					var_dump($phrase->checkLetter($_POST['input']));
+					//var_dump($phrase->checkLetter($_POST['input']));
 					
 					//Returns values in the selected property of the Phrase class
 					// echo "<pre>";
-					var_dump($game->keyboard());
+					$game->keyboard();
 					// echo "</pre>";
 				?>
 		</div>
