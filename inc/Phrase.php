@@ -25,7 +25,7 @@ class Phrase
 		// 	$this->currentPhrase = "dream big";
 		// }
 	}
-	// Adds letter placeholders to the display when game begins
+	// Add a phrase to guess to the page as blank squares
 	public function addPhraseToDisplay() {
 		$characters = str_split(strtolower($this->currentPhrase));
 		echo "<ul>";
