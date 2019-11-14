@@ -12,12 +12,6 @@
 	}
 	$_SESSION['phrase'] = 'start small';
 
-	// private $keyboard = [];
-	// private $keys;
-	// private $topRowKeys;
-	// private $middleRowKeys;
-	// private $bottomRowKeys;
-
 	//var_dump($_SESSION);
 	//session_destroy();
 ?>
