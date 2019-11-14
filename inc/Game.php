@@ -11,7 +11,7 @@ class Game
 	private $top_row = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
 	private $middle_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 	private $bottom_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
-	private $keyboard = [];
+	//private $keyboard = [];
 	public $keys;
 	public $topRowKeys;
 	public $middleRowKeys;
