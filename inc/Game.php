@@ -22,18 +22,21 @@ class Game
 	public function displayKeyboard() {
 		$this->keys .= "<div class='keyrow'>";
 		foreach ($this->top_row as $f_row) {
+			$this->keyboard();
 			$this->keys .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";	
 		}
 		$this->keys .= "</div>";
 
 		$this->keys .= "<div class='keyrow'>";
 		foreach ($this->middle_row as $m_row) {
+			$this->keyboard();
 			$this->keys .= "<button class='key' name='input' value='" . $m_row . "'>" . $m_row . "</button>";	
 		}
 		$this->keys .= "</div>";
 
 		$this->keys .= "<div class='keyrow'>";
 		foreach ($this->bottom_row as $b_row) {
+			$this->keyboard();
 			$this->keys .= "<button class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";	
 		}
 		$this->keys .= "</div>";
@@ -58,15 +61,16 @@ class Game
 		$this->keyboard = str_split($allrows);
 
 		foreach ($this->keyboard as $key) {
-			if (in_array($key, $selectedLetters) || !in_array($key, $selectedLetters)) {
-					if ($this->phrase->checkLetter($key) == true) {
-							echo $key . "<br>";
-							// echo $key = "<button class='key correct' name='input' value='t' style='background-color: red' disabled>t</button>";
-					} 
-			} else {
-					// echo $key = "<button class='key incorrect' name='input' value='t' style='background-color: red' disabled>t</button>";
-					echo $key . " is not in the phrase";
+			if (!in_array($key, $selectedLetters)) {
+					$this->keys .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</button>";
 			}
+			if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == false) {
+					$this->keys .= "<button class='key incorrect' name='input' value='" . $key .  "' disabled>" . $key . "</button>";
+			} 
+			if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == true) {
+					$this->keys .=  "<button class='key correct' name='input' value='" . $key .  "' disabled>" . $key . "</button>";
+			} 
+				//return $this->keys;
 		}
 	}
 }
