@@ -44,13 +44,13 @@ class Game
 		$selectedLetters = $this->phrase->selected; // array of letters in the selected property
 		foreach ($this->top_row as $f_row) {
 			if (!in_array($f_row, $selectedLetters) && $this->phrase->checkLetter($f_row) == false ) {
-					$this->topRowKeys .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";
+					$this->topRowKeys .= "<button type='submit' class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";
 			}
 			if (in_array($f_row, $selectedLetters) && $this->phrase->checkLetter($f_row) == true) {
-					$this->topRowKeys .= "<button class='key correct' name='input' value=' style=`background-color: green` disabled" . $f_row . "'>" . $f_row . "</button>";
+					$this->topRowKeys .= "<button type='submit' class='correct' name='input' value='" . $f_row . "' disabled>" . $f_row . "</button>";
 			}
 			if (in_array($f_row, $selectedLetters) && $this->phrase->checkLetter($f_row) == false) {
-				$this->topRowKeys .= "<button class='key incorrect' name='input' value=' style=`background-color: red` disabled" . $f_row . "'>" . $f_row . "</button>";
+				$this->topRowKeys .= "<button type='submit' class='incorrect' name='input' value='" . $f_row . "' disabled>" . $f_row . "</button>";
 			}		
 		}
 		return $this->keys .= $this->topRowKeys;
@@ -58,14 +58,29 @@ class Game
 	// Loops through and returns second row of keyboard
 	public function rowTwoKeys(){
 		foreach ($this->middle_row as $m_row) {
-			$this->middleRowKeys .= "<button class='key' name='input' value='" . $m_row . "'>" . $m_row . "</	button>";	
+			if (!in_array($m_row, $this->phrase->selected) && $this->phrase->checkLetter($m_row) == false ) {
+				$this->middleRowKeys .= "<button type='submit' class='key' name='input' value='" . $m_row . "'>" . $m_row . "</button>";
 		}
-		return $this->keys .= $this->middleRowKeys;
+		if (in_array($m_row, $this->phrase->selected) && $this->phrase->checkLetter($m_row) == true) {
+				$this->middleRowKeys .= "<button type='submit' class='key correct' name='input' value='" . $m_row . "' disabled>" . $m_row . "</button>";
+		}
+		if (in_array($m_row, $this->phrase->selected) && $this->phrase->checkLetter($m_row) == false) {
+			$this->middleRowKeys .= "<button type='submit' class='key incorrect' name='input' value='" . $m_row . "' disabled>" . $m_row . "</button>";
+		}		
 	}
+		return $this->keys .= $this->middleRowKeys;
+}
 	// Loops through and returns third row of keyboard
 	public function rowThreeKeys() {
 		foreach ($this->bottom_row as $b_row) {
-			$this->bottomRowKeys .= "<button class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";	
+			if (!in_array($b_row, $this->phrase->selected) && $this->phrase->checkLetter($b_row) == false ) {
+				$this->bottomRowKeys .= "<button type='submit' class='key' name='input' value='" . $b_row . "'>" . $b_row . "</button>";
+		}
+		if (in_array($b_row, $this->phrase->selected) && $this->phrase->checkLetter($b_row) == true) {
+				$this->bottomRowKeys .= "<button type='submit' class='key correct' name='input' value='" . $b_row . "' disabled>" . $b_row . "</button>";
+		}
+		if (in_array($b_row, $this->phrase->selected) && $this->phrase->checkLetter($b_row) == false) {
+			$this->bottomRowKeys .= "<button type='submit' class='key incorrect' name='input' value='" . $b_row . "' disabled>" . $b_row . "</button>";
 		}
 		return $this->keys .= $this->bottomRowKeys;
 	}
