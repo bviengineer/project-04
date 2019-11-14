@@ -49,11 +49,11 @@
 			</form>
 				<?php
 					// Storing keyboard output into a session variable
-					$_SESSION['keys'] = $game->keys;
-					// Storing keyboard by rows into individual session variables
-					$_SESSION['topRow'] = $game->topRowKeys;
-					$_SESSION['middleRow'] = $game->middleRowKeys;
-					$_SESSION['bottomRow'] = $game->bottomRowKeys; 
+					// $_SESSION['keys'] = $game->keys;
+					// // Storing keyboard by rows into individual session variables
+					// $_SESSION['topRow'] = $game->topRowKeys;
+					// $_SESSION['middleRow'] = $game->middleRowKeys;
+					// $_SESSION['bottomRow'] = $game->bottomRowKeys; 
 
 					// Display the visual scoreboard 
 					echo $game->displayScore();
