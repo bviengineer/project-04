@@ -41,8 +41,17 @@ class Game
 	}
 	// Loops through and returns first row of keyboard 
 	public function rowOneKeys() {
-		foreach ($this->top_row as $key => $f_row) {
-			$this->topRowKeys .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";
+		$selectedLetters = $this->phrase->selected; // array of letters in the selected property
+		foreach ($this->top_row as $f_row) {
+			if (!in_array($f_row, $selectedLetters) && $this->phrase->checkLetter($f_row) == false ) {
+					$this->topRowKeys .= "<button class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";
+			}
+			if (in_array($f_row, $selectedLetters) && $this->phrase->checkLetter($f_row) == true) {
+					$this->topRowKeys .= "<button class='key correct' name='input' value=' style=`background-color: green` disabled" . $f_row . "'>" . $f_row . "</button>";
+			}
+			if (in_array($f_row, $selectedLetters) && $this->phrase->checkLetter($f_row) == false) {
+				$this->topRowKeys .= "<button class='key incorrect' name='input' value=' style=`background-color: red` disabled" . $f_row . "'>" . $f_row . "</button>";
+			}		
 		}
 		return $this->keys .= $this->topRowKeys;
 	}
@@ -60,6 +69,41 @@ class Game
 		}
 		return $this->keys .= $this->bottomRowKeys;
 	}
+	// Listens for & verifies keyboard selection; update keyboard 
+	//public function verifyInputUpdateKeyboard() {
+
+		//foreach ($this->combineKeyboardRows() as $key) {
+			// If a key is not selected return defaul HTML buttons
+			// if (!in_array($key, $selectedLetters) && in_array($key, $this->top_row)) {
+			// 		$this->topRowKeys = "";
+			// 		$this->topRowKeys .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</	button>";
+			// 		$this->$keys .= $this->topRowKeys;
+			// } 
+			// if (!in_array($key, $selectedLetters) && in_array($key, $this->middle_row)) {
+			// 		$this->middleRowKeys = "";
+			// 		$this->middleRowKeys[$key] .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</	button>";
+			// 		$this->$keys .= $this->middleRowKeys;
+			// } 
+			// if (!in_array($key, $selectedLetters) && in_array($key, $this->bottom_row)) {
+			// 		$this->bottomRowKeys = "";
+			// 		$this->bottomRowKeys[$key] .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</	button>";
+			// 		$this->$keys .= $this->bottomRowKeys;
+			// }
+			// If key is selected & not in the phrase
+		// if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == false) {
+		// 		$this->keys .= "<button class='key incorrect' name='input' value='" . $key . "' style='background-color: red' disabled>" . $key . "</	button>";
+		// } elseif (!in_array($key, $selectedLetters) && in_array($key, $this->middle_row)) {
+		// 		$this->keys .= "<button class='key incorrect' name='input' value='" . $key . "' style='background-color: red' disabled>" . $key . "</	button>";
+		// } elseif (!in_array($key, $selectedLetters) && in_array($key, $this->bottom_row)) {
+		// 		$this->keys .= "<button class='key incorrect' name='input' value='" . $key . "' style='background-color: red' disabled>" . $key . "</	button>";
+		// 	}
+		// }
+	// If a key is selected and is in the phrase
+	// 		if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == true) {
+	// 				// $this->keys .=  "<button class='key correct' name='input' value='" . $key .  "' disabled>" . $key . "</button>";
+	// 				echo $key . " is a correct guess <br>";
+	// 		}
+	//  }
 	public function displayScore() {
 		$this->hearts = "<div id='scoreboard' class='section'><ol>";
 		for ($i = 0; $i <= $this->lives-1; $i++) {
@@ -76,41 +120,4 @@ class Game
 		$allrows = $row1 . $row2 . $row3;
 		return $this->keyboard = str_split($allrows);
 	}
-	// Listens for & verifies keyboard selection; update keyboard 
-	public function verifyInputUpdateKeyboard() {
-		$selectedLetters = $this->phrase->selected; // array of letters in the selected property
-
-		foreach ($this->combineKeyboardRows() as $key) {
-			// If a key is not selected return default HTML as is
-			if (!in_array($key, $selectedLetters) && in_array($key, $this->top_row)) {
-					$this->topRowKeys = "";
-					$this->topRowKeys .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</	button>";
-					$this->$keys .= $this->topRowKeys;
-			} 
-			if (!in_array($key, $selectedLetters) && in_array($key, $this->middle_row)) {
-					$this->middleRowKeys = "";
-					$this->middleRowKeys[$key] .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</	button>";
-					$this->$keys .= $this->middleRowKeys;
-			} 
-			if (!in_array($key, $selectedLetters) && in_array($key, $this->bottom_row)) {
-					$this->bottomRowKeys = "";
-					$this->bottomRowKeys[$key] .= "<button class='key' name='input' value='" . $key . "'>" . $key . "</	button>";
-					$this->$keys .= $this->bottomRowKeys;
-			}
-			// If key is selected & not in the phrase
-		if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == false) {
-				$this->keys .= "<button class='key incorrect' name='input' value='" . $key . "' style='background-color: red' disabled>" . $key . "</	button>";
-		} elseif (!in_array($key, $selectedLetters) && in_array($key, $this->middle_row)) {
-				$this->keys .= "<button class='key incorrect' name='input' value='" . $key . "' style='background-color: red' disabled>" . $key . "</	button>";
-		} elseif (!in_array($key, $selectedLetters) && in_array($key, $this->bottom_row)) {
-				$this->keys .= "<button class='key incorrect' name='input' value='" . $key . "' style='background-color: red' disabled>" . $key . "</	button>";
-			}
-		}
-	// If a key is selected and is in the phrase
-			if (in_array($key, $selectedLetters) && $this->phrase->checkLetter($key) == true) {
-					// $this->keys .=  "<button class='key correct' name='input' value='" . $key .  "' disabled>" . $key . "</button>";
-					echo $key . " is a correct guess <br>";
-			}
-	 }
-	}
-//}
+}
