@@ -75,7 +75,7 @@
 					//$game->combineKeyboardRows();
 					// echo "</pre>";
 					//$game->verifyInputUpdateKeyboard());
-					var_dump($game->rowOneKeys());
+					//var_dump($game->rowOneKeys());
 					
 				?>
 		</div>
