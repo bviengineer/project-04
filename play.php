@@ -11,6 +11,13 @@
 			$_SESSION['selected'] = [];
 	}
 	$_SESSION['phrase'] = 'start small';
+
+	// private $keyboard = [];
+	// private $keys;
+	// private $topRowKeys;
+	// private $middleRowKeys;
+	// private $bottomRowKeys;
+
 	//var_dump($_SESSION);
 	//session_destroy();
 ?>
@@ -44,7 +51,19 @@
 						?>
 				</div>
 			</form>
-				<?php 
+				<?php
+				// private $keyboard = [];
+				// private $keys;
+				// private $topRowKeys;
+				// private $middleRowKeys;
+				// private $bottomRowKeys; 
+					// Storing keyboard output into a session variable
+					$_SESSION['keys'] = $game->keys;
+					// Storing keyboard by rows into individual session variables
+					$_SESSION['topRow'] = $game->topRowKeys;
+					$_SESSION['middleRow'] = $game->middleRowKeys;
+					$_SESSION['bottomRow'] = $game->bottomRowKeys; 
+
 					// Display the visual scoreboard 
 					echo $game->displayScore();
 
@@ -53,8 +72,11 @@
 					
 					//Returns values in the selected property of the Phrase class
 					// echo "<pre>";
-					$game->keyboard();
+					//$game->combineKeyboardRows();
 					// echo "</pre>";
+					//$game->verifyInputUpdateKeyboard());
+					var_dump($game->rowOneKeys());
+					
 				?>
 		</div>
 	</body>
