@@ -33,6 +33,7 @@
 				// Instantiation of Phrase class
 				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
 
+				// Printing empty boxes representing phrase, to the page
 				echo $phrase->addPhraseToDisplay();
 
 				// Instantiation of Game class
@@ -41,16 +42,12 @@
 			<form method='POST' action='play.php'>
 				<div id='qwerty' class='section'>
 						<?php
+							// Printing the keyboard to the screen
 							echo $game->displayKeyboard();
 						?>
 				</div>
 			</form>
 				<?php
-				// private $keyboard = [];
-				// private $keys;
-				// private $topRowKeys;
-				// private $middleRowKeys;
-				// private $bottomRowKeys; 
 					// Storing keyboard output into a session variable
 					$_SESSION['keys'] = $game->keys;
 					// Storing keyboard by rows into individual session variables
