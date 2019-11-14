@@ -59,10 +59,10 @@ button, input[type=submit] {
   transition: var(--transition);
   cursor: pointer;
 }
-input[type=submit].incorrect {
+button.incorrect, input[type=submit].incorrect {
   background-color: var(--color-lose);
 }
-input[type=submit].correct {
+button.correct, input[type=submit].correct {
   background-color: var(--color-win);
 }
 
