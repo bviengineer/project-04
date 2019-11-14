@@ -55,15 +55,17 @@ class Game
 		$row2 = implode($this->middle_row);
 		$row3 = implode($this->bottom_row);
 		$allrows = $row1 . $row2 . $row3;
-		$keyboard = str_split($allrows);
+		$this->keyboard = str_split($allrows);
 
-		foreach ($keyboard as $key) {
+		foreach ($this->keyboard as $key) {
 			if (in_array($key, $selectedLetters) || !in_array($key, $selectedLetters)) {
 					if ($this->phrase->checkLetter($key) == true) {
-							echo $key = "<button class='key correct' name='input' value='t' style='background-color: red' disabled>t</button>";
+							echo $key . "<br>";
+							// echo $key = "<button class='key correct' name='input' value='t' style='background-color: red' disabled>t</button>";
 					} 
 			} else {
-				echo $key = "<button class='key incorrect' name='input' value='t' style='background-color: red' disabled>t</button>";
+					// echo $key = "<button class='key incorrect' name='input' value='t' style='background-color: red' disabled>t</button>";
+					echo $key . " is not in the phrase";
 			}
 		}
 	}
