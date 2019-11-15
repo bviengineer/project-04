@@ -31,8 +31,10 @@ class Phrase
 			foreach ($phraseToGuess as $thePhrase) {
 				if ($thePhrase == " ") {
 						$phraseDisplay .= "<li class='space'>" . $thePhrase . "</li>";
-				} else {
+				} elseif (!in_array($thePhrase, $this->selected)) {
 						$phraseDisplay .= "<li class='hide letter'>" . $thePhrase . "</li>";
+				} elseif (in_array($thePhrase, $this->selected)) {
+						$phraseDisplay .= "<li class='show letter'>" . $thePhrase . "</li>";
 				}
 			}
 		$phraseDisplay .= "</ul>";
