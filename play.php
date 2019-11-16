@@ -3,7 +3,7 @@
 	session_start();
 	
 	include "inc/Game.php";
-	include 'inc/Phrase.php';
+	include "inc/Phrase.php";
 
 	// Resets the game
 	if (isset($_POST['start'])) {
@@ -16,7 +16,7 @@
 	} else {
 			$_SESSION['selected'] = [];
 	}
-
+	// $_SESSION['phrase'] = 'start small';
 	//var_dump($_SESSION);
 	//session_destroy();
 ?>
@@ -37,7 +37,8 @@
 			<?php 
 				// Instantiation of Phrase class
 				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
-				$_SESSION['phrase'] = 'start small';
+				$_SESSION['phrase']= $phrase->getCurrentPhrase();
+				// $_SESSION['phrase'] = $phrase->currentPhrase;
 
 				// Printing empty boxes representing phrase, to the page
 				echo $phrase->addPhraseToDisplay();
@@ -50,6 +51,9 @@
 						<?php
 							// Printing the keyboard to the screen
 							echo $game->displayKeyboard();
+							
+							// TESTING CURRENT PHRASE
+							var_dump($phrase->getCurrentPhrase());
 						?>
 				</div>
 			</form>
