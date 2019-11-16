@@ -2,7 +2,7 @@
 // Phrase.php to create a Phrase class to handle the phrases
 class Phrase 
 {
-	private $currentPhrase = "dream big"; //"Australia is known as the land Down Under";
+	private $currentPhrase; //"Australia is known as the land Down Under";
 	private $selected = [];
 	public $randomPhrase = [
 		"Birds of a feather flock together",
@@ -23,9 +23,10 @@ class Phrase
 		if (!empty($selected)) {
 			$this->selected = $selected;
 		} 
-		// if(!isset($currentPhrase)) {
-		// 	$this->currentPhrase = "dream big";
-		// }
+		if(!isset($currentPhrase)) {
+			$getPhrase = rand(0, count($this->randomPhrase));
+			$this->currentPhrase = $this-randomPhrase[$getPhrase];
+		}
 	}
 	// Add the phrase to be guessed to the page as blank squares
 	public function addPhraseToDisplay() {
