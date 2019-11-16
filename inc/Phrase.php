@@ -5,15 +5,15 @@ class Phrase
 	private $currentPhrase; //"Australia is known as the land Down Under";
 	private $selected = [];
 	public $randomPhrase = [
-		"Birds of a feather flock together",
+		"Boldness be my friend",
+		"Borken crayons still color",
 		"Carry on",
-		"Do unto others as you would have them do unto you", // Matthew 7:12
 		"Dream big",
-		"Empty vessels make the most noise",
-		"Hatred stirs up strive, But love covers all offenses", // Proverbs 10:12
-		"Love your neighbor as yourself", // Mark 12:31
+		"Dream without fear",
+		"Leave no stone unturned",
+		"Love without limits",
 		"Make haste",
-		"Necessity is the mother of invention", 
+		"The adventure begins", 
 	];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
