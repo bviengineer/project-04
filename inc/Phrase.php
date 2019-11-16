@@ -6,7 +6,7 @@ class Phrase
 	private $selected = [];
 	public $randomPhrase = [
 		"Boldness be my friend",
-		"Borken crayons still color",
+		"Broken crayons still color",
 		"Carry on",
 		"Dream big",
 		"Dream without fear",
