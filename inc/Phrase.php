@@ -26,7 +26,6 @@ class Phrase
 		if(!isset($currentPhrase)) {
 			$getPhrase = rand(0, count($this->randomPhrase)-1);
 			$this->currentPhrase = $this->randomPhrase[$getPhrase];
-			//$this->$currentPhrase = "dream big";
 		}
 	}
 	// Add the phrase to be guessed to the page as blank squares
@@ -55,7 +54,7 @@ class Phrase
 	public function __get($selected) {
 		return $this->selected;
 	}
-	public function getPCurrentPhrase() {
+	public function getCurrentPhrase() {
 		return $this->currentPhrase;
 	}
 }
