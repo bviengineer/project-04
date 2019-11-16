@@ -4,7 +4,7 @@ class Phrase
 {
 	private $currentPhrase = "dream big"; //"Australia is known as the land Down Under";
 	private $selected = [];
-	private $randomPhrase = [
+	public $randomPhrase = [
 		"Birds of a feather flock together",
 		"Carry on",
 		"Do unto others as you would have them do unto you", // Matthew 7:12
@@ -14,7 +14,6 @@ class Phrase
 		"Love your neighbor as yourself", // Mark 12:31
 		"Make haste",
 		"Necessity is the mother of invention", 
-		"Never too old to learn",
 	];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
