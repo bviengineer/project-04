@@ -7,14 +7,13 @@ class Phrase
 	private $randomPhrase = [
 		"Birds of a feather flock together",
 		"Carry on",
-		"Do unto others as you would have them do unto you",
+		"Do unto others as you would have them do unto you", // Matthew 7:12
 		"Dream big",
 		"Empty vessels make the most noise",
 		"Hatred stirs up strive, But love covers all offenses.", // Proverbs 10:12
 		"Love your neighbor as yourself", // Mark 12:31
 		"Make haste",
-		"Necessity is the mother of invention",
-		"The greatest servant is the greatest leader",
+		"Necessity is the mother of invention", 
 	];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
