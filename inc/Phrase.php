@@ -5,12 +5,16 @@ class Phrase
 	private $currentPhrase = "dream big"; //"Australia is known as the land Down Under";
 	private $selected = [];
 	private $randomPhrase = [
-		"Empty vessels make the most noise",
 		"Birds of a feather flock together",
-		"Do unto others as you would have them do unto you",
-		"The greatest servant is the greatest leader",
 		"Carry on",
-		"Make haste"
+		"Do unto others as you would have them do unto you",
+		"Dream big",
+		"Empty vessels make the most noise",
+		"Hatred stirs up strive, But love covers all offenses.", // Proverbs 10:12
+		"Love your neighbor as yourself", // Mark 12:31
+		"Make haste",
+		"Necessity is the mother of invention",
+		"The greatest servant is the greatest leader",
 	];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
