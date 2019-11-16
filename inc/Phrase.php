@@ -10,10 +10,11 @@ class Phrase
 		"Do unto others as you would have them do unto you", // Matthew 7:12
 		"Dream big",
 		"Empty vessels make the most noise",
-		"Hatred stirs up strive, But love covers all offenses.", // Proverbs 10:12
+		"Hatred stirs up strive, But love covers all offenses", // Proverbs 10:12
 		"Love your neighbor as yourself", // Mark 12:31
 		"Make haste",
 		"Necessity is the mother of invention", 
+		"Never too old to learn",
 	];
 
 	public function __construct($currentPhrase = null, $selected = array() ) {
