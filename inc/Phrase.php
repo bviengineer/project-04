@@ -24,8 +24,9 @@ class Phrase
 			$this->selected = $selected;
 		} 
 		if(!isset($currentPhrase)) {
-			$getPhrase = rand(0, count($this->randomPhrase));
-			$this->currentPhrase = $this-randomPhrase[$getPhrase];
+			$getPhrase = rand(0, count($this->randomPhrase)-1);
+			$this->currentPhrase = $this->randomPhrase[$getPhrase];
+			//$this->$currentPhrase = "dream big";
 		}
 	}
 	// Add the phrase to be guessed to the page as blank squares
@@ -53,5 +54,8 @@ class Phrase
 	//Will return the array of letter seletions using the __get magic method 
 	public function __get($selected) {
 		return $this->selected;
+	}
+	public function getPCurrentPhrase() {
+		return $this->currentPhrase;
 	}
 }
