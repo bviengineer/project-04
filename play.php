@@ -5,6 +5,12 @@
 	include "inc/Game.php";
 	include 'inc/Phrase.php';
 
+	// Resets the game
+	if (isset($_POST['start'])) {
+			unset($_SESSION['selected']);
+			unset($_SESSION['phrase']);
+	}
+	// Checks for user selection 
 	if (isset($_SESSION['selected']) && isset($_POST['input'])) {
 			array_push($_SESSION['selected'], filter_input(INPUT_POST, 'input', FILTER_SANITIZE_STRING));
 	} else {
@@ -47,28 +53,10 @@
 						?>
 				</div>
 			</form>
-				<?php
-					// Storing keyboard output into a session variable
-					// $_SESSION['keys'] = $game->keys;
-					// // Storing keyboard by rows into individual session variables
-					// $_SESSION['topRow'] = $game->topRowKeys;
-					// $_SESSION['middleRow'] = $game->middleRowKeys;
-					// $_SESSION['bottomRow'] = $game->bottomRowKeys; 
-
-					// Display the visual scoreboard 
-					echo $game->displayScore();
-
-					// Check letter pressed against the letters selected & return true or false
-					//var_dump($phrase->checkLetter($_POST['input']));
-					
-					//Returns values in the selected property of the Phrase class
-					// echo "<pre>";
-					//$game->combineKeyboardRows();
-					// echo "</pre>";
-					//$game->verifyInputUpdateKeyboard());
-					//var_dump($game->rowOneKeys());
-					
-				?>
+			<?php
+				// Display the visual scoreboard 
+				echo $game->displayScore();
+			?>
 		</div>
 	</body>
 </html>
