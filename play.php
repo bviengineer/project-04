@@ -16,7 +16,6 @@
 	} else {
 			$_SESSION['selected'] = [];
 	}
-	$_SESSION['phrase'] = 'start small';
 
 	//var_dump($_SESSION);
 	//session_destroy();
@@ -38,6 +37,7 @@
 			<?php 
 				// Instantiation of Phrase class
 				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
+				$_SESSION['phrase'] = 'start small';
 
 				// Printing empty boxes representing phrase, to the page
 				echo $phrase->addPhraseToDisplay();
