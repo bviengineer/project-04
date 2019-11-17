@@ -91,22 +91,22 @@ public function rowThreeKeys() {
 }
 public function displayScore() {
 	$this->hearts = "<div id='scoreboard' class='section'><ol>";
-		$winHearts = "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
-		$loseHearts = "<li class='tries'><img src='images/lostHeart.png' height='35px' widght='30px'></li>";
+	$winHearts = "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
+	$loseHearts = "<li class='tries'><img src='images/lostHeart.png' height='35px' widght='30px'></li>";
 
-		$this->lives = $this->lives - $this->phrase->numberLost(); // updating # of wins based on losses 
-		if ($this->lives == 5) {
-				for ($win = 1; $win <= $this->lives; $win++) {
-							$this->hearts .= $winHearts;
-				} 
-			} elseif ($this->lives >= 0 && $this->lives < 5 && $this->phrase->numberLost() >= 1 && $this->phrase->numberLost() <= 5) {
-					for ($win = 1; $win <= $this->lives; $win++) {
+	$this->lives = $this->lives - $this->phrase->numberLost(); // updating # of wins based on losses 
+	if ($this->lives == 5) {
+			for ($win = 1; $win <= $this->lives; $win++) {
 						$this->hearts .= $winHearts;
-					}
-					for ($lose = 1; $lose <= $this->phrase->numberLost(); $lose++) {
-						$this->hearts .= $loseHearts;
-					}
-			}
+			} 
+		} elseif ($this->lives >= 0 && $this->lives < 5 && $this->phrase->numberLost() >= 1 && $this->phrase->numberLost() <= 5) {
+				for ($win = 1; $win <= $this->lives; $win++) {
+					$this->hearts .= $winHearts;
+				}
+				for ($lose = 1; $lose <= $this->phrase->numberLost(); $lose++) {
+					$this->hearts .= $loseHearts;
+				}
+		}
 	 $this->hearts .= "</ol></div>";
 	 return $this->hearts;
 	}
@@ -125,6 +125,14 @@ public function displayScore() {
 			exit;
 		} else {
 			return false;
+		}
+	}
+	public function checkForWin() {
+		if (array_intersect($this->phrase->selected, $this->phrase->getLetterArray())) {
+				//echo count(array_intersect($this->phrase->selected, $this->phrase->getLetterArray())); 
+				return true;
+		} else {
+				return false;
 		}
 	}
 }
