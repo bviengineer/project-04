@@ -16,8 +16,8 @@
 	} else {
 			$_SESSION['selected'] = [];
 	}
-	// $_SESSION['phrase'] = 'start small';
-	//var_dump($_SESSION);
+	// $_SESSION['phrase'] = "start small";
+	var_dump($_SESSION);
 	//session_destroy();
 ?>
 <!DOCTYPE html>
@@ -36,8 +36,8 @@
 			<h2 class="header">Phrase Hunter</h2>
 			<?php 
 				// Instantiation of Phrase class
-				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
-				$_SESSION['phrase']= $phrase->getCurrentPhrase();
+					$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
+					$_SESSION['phrase']= $phrase->getCurrentPhrase();
 				
 				// Printing empty boxes representing phrase, to the page
 				echo $phrase->addPhraseToDisplay();
