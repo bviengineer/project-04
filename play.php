@@ -57,10 +57,11 @@
 				</div>
 			</form>
 			<?php
-				// var_dump($game->checkForLose());
-				var_dump($game->gameOver());
 				// Display the visual scoreboard 
 				echo $game->displayScore();
+
+				// Game over method if player has 5 or more inccorrect guesses 
+				$game->gameOver();
 			?>
 		</div>
 	</body>
