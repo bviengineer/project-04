@@ -118,4 +118,12 @@ public function displayScore() {
 			return false;
 		}
 	}
+	// Displays game over message to player 
+	public function gameOver() {
+		if ($this->checkForLose()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
