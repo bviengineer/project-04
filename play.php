@@ -57,6 +57,7 @@
 				</div>
 			</form>
 			<?php
+				var_dump($game->checkForLose());
 				// Display the visual scoreboard 
 				echo $game->displayScore();
 			?>
