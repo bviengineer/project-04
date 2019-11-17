@@ -91,11 +91,30 @@ public function rowThreeKeys() {
 }
 public function displayScore() {
 	$this->hearts = "<div id='scoreboard' class='section'><ol>";
-	for ($i = 1; $i <= $this->lives; $i++) {
-			$this->hearts .= "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
-	}
-	$this->hearts .= "</ol></div>";
-		return $this->hearts;
-	}
+		$winHearts = "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
+		$loseHearts = "<li class='tries'><img src='images/lostHeart.png' height='35px' widght='30px'></li>";
 
+		$this->lives = $this->lives - $this->phrase->numberLost(); // updating # of win hearts
+		if ($this->lives == 5) {
+				for ($win = 1; $win <= $this->lives; $win++) {
+							$this->hearts .= $winHearts;
+				} 
+			} elseif ($this->lives >= 0 && $this->lives < 5 ) {
+					for ($win = 1; $win <= $this->lives; $win++) {
+						$this->hearts .= $winHearts;
+					}
+				}
+		// } return $this->hearts = $winHearts;
+
+	// if ($this->phrase->numberLost() >= 1 && $this->phrase->numberLost <= 5) {
+	// 		//$this->lives = $this->lives - $this->phrase->numberLost(); //updating # of win hearts 
+	// 		for ($lose = 5; $lose >= $this->phrase->numberLost(); $lose-- ) {
+	// 			$loseHearts .= "<li class='tries'><img src='images/lostHeart.png' height='35px' widght='30px'></li>";
+	// 		}
+	// }
+	// $this->hearts .= $winHearts;
+	// $this->hearts .= $loseHearts;
+	 $this->hearts .= "</ol></div>";
+	 return $this->hearts;
+	}
 }
