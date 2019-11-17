@@ -121,7 +121,8 @@ public function displayScore() {
 	// Displays game over message to player 
 	public function gameOver() {
 		if ($this->checkForLose()) {
-			return true;
+			header('Location: inc/game_over.php');
+			exit;
 		} else {
 			return false;
 		}
