@@ -5,13 +5,10 @@ class Game
 {
 	private $phrase;
 	private $lives = 5;
-	//private $chars; // keybord characters 
 	private $hearts; // visual game board
-	//public  $value;
 	private $top_row = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
 	private $middle_row = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'];
 	private $bottom_row = ['z', 'x', 'c', 'v', 'b', 'n', 'm'];
-	//private $keyboard = [];
 	public $keys;
 	public $topRowKeys;
 	public $middleRowKeys;
@@ -41,16 +38,18 @@ class Game
 	}
 	// Loops through and returns first row of keyboard 
 	public function rowOneKeys() {
-		//$selectedLetters = $this->phrase->selected; // array of letters in the selected property
 		foreach ($this->top_row as $f_row) {
 			if (!in_array($f_row, $this->phrase->selected)) {
-					$this->topRowKeys .= "<button type='submit' class='key' name='input' value='" . $f_row . "'>" . $f_row . "</button>";
+					$this->topRowKeys .= "<button type='submit' class='key' name='input' value='"; 
+					$this->topRowKeys .= $f_row . "'>" . $f_row . "</button>";
 			}
 			if (in_array($f_row, $this->phrase->selected) && $this->phrase->checkLetter($f_row) == true) {
-					$this->topRowKeys .= "<button type='submit' class='key chosen' name='input' value='" . $f_row . "' disabled>" . $f_row . "</button>";
+					$this->topRowKeys .= "<button type='submit' class='key chosen' name='input' value='";
+					$this->topRowKeys .= $f_row . "' disabled>" . $f_row . "</button>";
 			}
 			if (in_array($f_row, $this->phrase->selected) && $this->phrase->checkLetter($f_row) == false) {
-				$this->topRowKeys .= "<button type='submit' class='key wrong' name='input' value='" . $f_row . "' disabled>" . $f_row . "</button>";
+				$this->topRowKeys .= "<button type='submit' class='key wrong' name='input' value='"; 
+				$this->topRowKeys .= $f_row . "' disabled>" . $f_row . "</button>";
 			}		
 		}
 		return $this->keys .= $this->topRowKeys;
@@ -90,15 +89,7 @@ public function displayScore() {
 				$this->hearts .= "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
 	}
 	$this->hearts .= "</ol></div>";
-	return $this->hearts;
-}
-	// Combine keyboard rows 
-	// public function combineKeyboardRows() {
-	// 	$row1 = implode($this->top_row);
-	// 	$row2 = implode($this->middle_row);
-	// 	$row3 = implode($this->bottom_row);
-	// 	$allrows = $row1 . $row2 . $row3;
-	// 	return $this->keyboard = str_split($allrows);
-	// }
-	//}
+		return $this->hearts;
+	}
+
 }
