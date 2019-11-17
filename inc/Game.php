@@ -110,4 +110,12 @@ public function displayScore() {
 	 $this->hearts .= "</ol></div>";
 	 return $this->hearts;
 	}
+	// Checks whether player attempts have reached 5
+	public function checkForLose() {
+		if ($this->phrase->numberLost() == 5) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
