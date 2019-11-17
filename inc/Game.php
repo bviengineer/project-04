@@ -58,13 +58,16 @@ class Game
 	public function rowTwoKeys(){
 		foreach ($this->middle_row as $m_row) {
 			if (!in_array($m_row, $this->phrase->selected)) {
-				$this->middleRowKeys .= "<button type='submit' class='key' name='input' value='" . $m_row . "'>" . $m_row . "</button>";
+				$this->middleRowKeys .= "<button type='submit' class='key' name='input' value='";
+				$this->middleRowKeys .= $m_row . "'>" . $m_row . "</button>";
 		}
 		if (in_array($m_row, $this->phrase->selected) && $this->phrase->checkLetter($m_row) == true) {
-				$this->middleRowKeys .= "<button type='submit' class='key chosen' name='input' value='" . $m_row . "' disabled>" . $m_row . "</button>";
+				$this->middleRowKeys .= "<button type='submit' class='key chosen' name='input' value='";
+				$this->middleRowKeys .= $m_row . "' disabled>" . $m_row . "</button>";
 		}
 		if (in_array($m_row, $this->phrase->selected) && $this->phrase->checkLetter($m_row) == false) {
-			$this->middleRowKeys .= "<button type='submit' class='key wrong' name='input' value='" . $m_row . "' disabled>" . $m_row . "</button>";
+			$this->middleRowKeys .= "<button type='submit' class='key wrong' name='input' value='";
+			$this->middleRowKeys .= $m_row . "' disabled>" . $m_row . "</button>";
 		}		
 	}
 		return $this->keys .= $this->middleRowKeys;
