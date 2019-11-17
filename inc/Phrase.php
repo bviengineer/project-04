@@ -46,9 +46,9 @@ class Phrase
 	}
 	// Check selected letter against the current phrase
 	public function checkLetter($letter) {
-		$parsedPhrase = array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
+		// $parsedPhrase = array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
 		//$theLetter = $letter[count($letter)-1]; // gets most recent keypress 
-		return in_array($letter, $parsedPhrase);
+		return in_array($letter, $this->getLetterArray());
 	}
 	//Will return the array of letter seletions using the __get magic method 
 	public function __get($selected) {
@@ -56,5 +56,9 @@ class Phrase
 	}
 	public function getCurrentPhrase() {
 		return $this->currentPhrase;
+	}
+	public function getLetterArray() {
+		$uniqueLetters = array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
+		return $uniqueLetters;
 	}
 }
