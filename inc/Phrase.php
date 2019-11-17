@@ -61,4 +61,9 @@ class Phrase
 		$uniqueLetters = array_unique(str_split(strtolower(str_replace(" ", "", $this->currentPhrase))));
 		return $uniqueLetters;
 	}
+	// Calculates the number of incorrcet letter guesses
+	public function numberLost() {
+		$wrongGussess = array_diff($this->selected, $this->getLetterArray());
+		return count($wrongGussess);
+	}
 }
