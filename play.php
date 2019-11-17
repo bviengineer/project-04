@@ -17,7 +17,7 @@
 			$_SESSION['selected'] = [];
 	}
 	// $_SESSION['phrase'] = "start small";
-	var_dump($_SESSION);
+	//var_dump($_SESSION);
 	//session_destroy();
 ?>
 <!DOCTYPE html>
