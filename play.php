@@ -38,6 +38,7 @@
 				// Instantiation of Phrase class
 					$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
 					$_SESSION['phrase']= $phrase->getCurrentPhrase();
+					echo $phrase->numberLost();
 				
 				// Printing empty boxes representing phrase, to the page
 				echo $phrase->addPhraseToDisplay();
