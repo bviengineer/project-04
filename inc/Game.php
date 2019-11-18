@@ -131,7 +131,7 @@ public function displayScore() {
 		}
 	}
 
-	// Redirects to lose page if player lost game or calls to win page if player won game
+	// Redirects to lose page if player lost game or to win page if player won game
 	public function gameOver() {
 		if ($this->checkForLose()) {
 				header('Location: game_over.php');
