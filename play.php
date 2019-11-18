@@ -65,7 +65,7 @@
 				$game->gameOver();
 				
 				// Returns true if player wins game
-				var_dump($game->checkForWin());
+				$game->checkForWin();
 			?>
 		</div>
 	</body>
