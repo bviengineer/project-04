@@ -135,10 +135,8 @@ public function displayScore() {
 	public function gameOver() {
 		if ($this->checkForLose()) {
 				header('Location: game_over.php');
-				exit;
 		} elseif ($this->checkForWin()) {
 				header('Location: game_win.php');
-				exit;
 		} 
 	}
 
