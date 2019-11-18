@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	// session_destro();
+	// session_destroy();
 
   // Resets the game
 	if (isset($_POST['start'])) {
