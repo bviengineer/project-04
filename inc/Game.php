@@ -1,5 +1,8 @@
 <?php
-// Game.php to create a Game class with methods for showing the game, handling interactions, and checking for game over.
+/*================================================================
+	Game.php creates Game class with methods for showing the game, 
+	handling interactions, and checking for game over.
+=================================================================*/ 
 
 class Game 
 {
@@ -20,7 +23,8 @@ class Game
 	public function __construct($phraseObject) {
 		$this->phrase = $phraseObject;
 	}
-	// Print keyboard to the page
+
+	// Assembles game keyboard by row
 	public function displayKeyboard() {
 		$this->keys .= $this->openDivTag;
 		$this->rowOneKeys();
@@ -36,6 +40,7 @@ class Game
 
 		return $this->keys;
 	}
+
 	// Loops through and returns first row of keyboard 
 	public function rowOneKeys() {
 		foreach ($this->top_row as $f_row) {
@@ -54,6 +59,7 @@ class Game
 		}
 		return $this->keys .= $this->topRowKeys;
 	}
+
 	// Loops through and returns second row of keyboard
 	public function rowTwoKeys(){
 		foreach ($this->middle_row as $m_row) {
@@ -71,7 +77,9 @@ class Game
 		}		
 	}
 		return $this->keys .= $this->middleRowKeys;
-}	// Loops through and returns third row of keyboard
+}	
+
+// Loops through and returns third row of keyboard
 public function rowThreeKeys() {
 	foreach ($this->bottom_row as $b_row) {
 		if (!in_array($b_row, $this->phrase->selected)) {
@@ -89,12 +97,15 @@ public function rowThreeKeys() {
 	}
 	return $this->keys .= $this->bottomRowKeys;
 }
+
+// Calculates and returns player score 
 public function displayScore() {
 	$this->hearts = "<div id='scoreboard' class='section'><ol>";
 	$winHearts = "<li class='tries'><img src='images/liveHeart.png' height='35px' widght='30px'></li>";
 	$loseHearts = "<li class='tries'><img src='images/lostHeart.png' height='35px' widght='30px'></li>";
 
 	$this->lives = $this->lives - $this->phrase->numberLost(); // updating # of wins based on losses 
+
 	if ($this->lives == 5) {
 			for ($win = 1; $win <= $this->lives; $win++) {
 						$this->hearts .= $winHearts;
@@ -107,10 +118,11 @@ public function displayScore() {
 					$this->hearts .= $loseHearts;
 				}
 		}
-	 $this->hearts .= "</ol></div>";
-	 return $this->hearts;
+	 	$this->hearts .= "</ol></div>";
+	 	return $this->hearts;
 	}
-	// Checks whether player unsuccessful attempts have reached 5 tries
+
+	// Checks whether player lost the game
 	public function checkForLose() {
 		if ($this->phrase->numberLost() == 5) {
 			return true;
@@ -118,7 +130,8 @@ public function displayScore() {
 			return false;
 		}
 	}
-	// Displays game over message to player 
+
+	// Redirects to lose page if player lost game or calls to win page if player won game
 	public function gameOver() {
 		if ($this->checkForLose()) {
 				header('Location: game_over.php');
@@ -128,6 +141,8 @@ public function displayScore() {
 				exit;
 		} 
 	}
+
+	// Verifies whether player has won the game 
 	public function checkForWin() {
 		$arrayIntersect = array_intersect($this->phrase->selected, $this->phrase->getLetterArray()); 
 		if (count($arrayIntersect) == count($this->phrase->getLetterArray())) {
