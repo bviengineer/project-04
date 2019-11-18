@@ -1,8 +1,7 @@
 <?php 
 	session_start();
-	// session_destroy();
 
-  // Resets the game
+  // Reset game -> resseting session variables
 	if (isset($_POST['start'])) {
     unset($_SESSION['selected']);
     unset($_SESSION['phrase']);
