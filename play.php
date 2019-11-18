@@ -60,11 +60,12 @@
 				// Display the visual scoreboard 
 				echo $game->displayScore();
 
-				// Game over method if player has 5 or more inccorrect guesses 
+				// Verifies if player has 5 or more inccorrect guesses and
+				// Calls method that determines if if player wins the game
 				$game->gameOver();
 				
-				// Calls win overlay if player guesses all letters correctly 
-				//$game->checkForWin();
+				// Returns true if player wins game
+				var_dump($game->checkForWin());
 			?>
 		</div>
 	</body>
