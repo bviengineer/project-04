@@ -110,7 +110,7 @@ public function displayScore() {
 	 $this->hearts .= "</ol></div>";
 	 return $this->hearts;
 	}
-	// Checks whether player attempts have reached 5
+	// Checks whether player unsuccessful attempts have reached 5 tries
 	public function checkForLose() {
 		if ($this->phrase->numberLost() == 5) {
 			return true;
@@ -121,16 +121,19 @@ public function displayScore() {
 	// Displays game over message to player 
 	public function gameOver() {
 		if ($this->checkForLose()) {
-			header('Location: game_over.php');
-			exit;
+				header('Location: game_over.php');
+				exit;
+		} elseif ($this->checkForWin()) {
+				header('Location: game_win.php');
+				//false;
 		} else {
-			return false;
+				return false;
 		}
 	}
 	public function checkForWin() {
-		if (array_intersect($this->phrase->selected, $this->phrase->getLetterArray())) {
-				//echo count(array_intersect($this->phrase->selected, $this->phrase->getLetterArray())); 
-				return true;
+		$arrayIntersect = array_intersect($this->phrase->selected, $this->phrase->getLetterArray()); 
+				if (count($arrayIntersect) == count($this->phrase->getLetterArray)) {
+					return true;
 		} else {
 				return false;
 		}
