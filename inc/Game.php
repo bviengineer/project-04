@@ -138,13 +138,14 @@ public function gameOver() {
 			header('Location: game_over.php');
 	} elseif ($this->checkForWin()) {
 			header('Location: game_win.php');
-	} 
+	} else {
+			return false;
+	}
 }
 
 // Verifies whether player has won the game 
 public function checkForWin() {
 	$arrayIntersect = array_intersect($this->phrase->selected, $this->phrase->getLetterArray()); 
-	
 	if (count($arrayIntersect) == count($this->phrase->getLetterArray())) {
 		return true;
 	} else {
