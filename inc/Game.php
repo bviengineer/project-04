@@ -123,17 +123,15 @@ public function displayScore() {
 		if ($this->checkForLose()) {
 				header('Location: game_over.php');
 				exit;
-		} elseif ($this->checkForWin()) {
-				header('Location: game_win.php');
+		} else { 
+				$this->checkForWin();
 				//false;
-		} else {
-				return false;
-		}
+			} 
 	}
 	public function checkForWin() {
 		$arrayIntersect = array_intersect($this->phrase->selected, $this->phrase->getLetterArray()); 
 				if (count($arrayIntersect) == count($this->phrase->getLetterArray)) {
-					return true;
+						header('Location: game_win.php');
 		} else {
 				return false;
 		}
