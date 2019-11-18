@@ -1,5 +1,8 @@
 <?php 
-// Play.php: Manage HTML, instantiating objects, storing sessions and calling appropriate methods
+	/*================================================================
+		Play.php: Manage HTML, instantiating objects, storing sessions 
+		and calling appropriate methods
+	=================================================================*/
 	session_start();
 	
 	include "inc/Game.php";
