@@ -62,6 +62,9 @@
 
 				// Game over method if player has 5 or more inccorrect guesses 
 				$game->gameOver();
+				
+				// Calls win overlay if player guesses all letters correctly 
+				//$game->checkForWin();
 			?>
 		</div>
 	</body>
