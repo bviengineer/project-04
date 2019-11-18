@@ -130,8 +130,8 @@ public function displayScore() {
 	}
 	public function checkForWin() {
 		$arrayIntersect = array_intersect($this->phrase->selected, $this->phrase->getLetterArray()); 
-				if (count($arrayIntersect) == count($this->phrase->getLetterArray)) {
-						header('Location: game_win.php');
+		if (count($arrayIntersect) == count($this->phrase->getLetterArray)) {
+				header('Location: game_win.php');
 		} else {
 				return false;
 		}
