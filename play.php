@@ -1,11 +1,11 @@
 <?php 
-// play.php to haxndle the HTML, instantiating objects, storing sessions and calling appropriate methods
+// Play.php: Manage HTML, instantiating objects, storing sessions and calling appropriate methods
 	session_start();
 	
 	include "inc/Game.php";
 	include "inc/Phrase.php";
 
-	// Resets the game
+	// Reset game -> resseting session variables 
 	if (isset($_POST['start'])) {
 			unset($_SESSION['selected']);
 			unset($_SESSION['phrase']);
@@ -17,8 +17,6 @@
 			$_SESSION['selected'] = [];
 	}
 	// $_SESSION['phrase'] = "start small";
-	//var_dump($_SESSION);
-	//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,16 +28,17 @@
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
-
 	<body>
 		<div class="main-container">
 			<h2 class="header">Phrase Hunter</h2>
 			<?php 
 				// Instantiation of Phrase class
-					$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
-					$_SESSION['phrase']= $phrase->getCurrentPhrase();
+				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
 				
-				// Printing empty boxes representing phrase, to the page
+				// Setting phrase in session varaible to a random phrase 
+				$_SESSION['phrase']= $phrase->getCurrentPhrase();
+				
+				// Printing empty boxes representing a random phrase, to the page
 				echo $phrase->addPhraseToDisplay();
 
 				// Instantiation of Game class
@@ -61,11 +60,8 @@
 				echo $game->displayScore();
 
 				// Verifies if player has 5 or more inccorrect guesses and
-				// Calls method that determines if if player wins the game
+				// Calls method that determines if player wins the game
 				$game->gameOver();
-				
-				// Returns true if player wins game
-				$game->checkForWin();
 			?>
 		</div>
 	</body>
