@@ -185,11 +185,20 @@ button.correct, input[type=submit].correct {
   border-radius: 5px;
 }
 /* Win overlay */
-.win {
-  background-color: green;
-}
 h1#game-win-message, h2.header {
   color: var(--color-heading);
+}
+.stars {
+  font-size: 4em;
+}
+.congrats {
+  font-size: 3em;
+  letter-spacing: 5px;
+  font-family: 'Codystart', cursive;
+}
+#phrase {
+  color: darkmagenta;
+  font-size: 2em;
 }
 
 .title {
