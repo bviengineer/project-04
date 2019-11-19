@@ -8,26 +8,19 @@ class Phrase
 	private $currentPhrase;
 	private $selected = [];
 	public $randomPhrase = [
-		//"Boldness Be My Friend",
 		"Broken Crayons Still Color",
-		//"By crawling a child learns to stand",
 		"Carry on",
 		"Count your blessings",
-		//"Dream Big",
-		//"Dream Without Fear",
+		"Dream Big",
 		"Go the extra mile",
-		//"Hold a true friend with both hands",
 		"Leave no stone unturned",
 		"Less is more",
 		"Love without limits",
-		//"Necessity is the mother of invention",
 		"Make haste",
 		"Manners maketh man",
 		"No one can serve two masters",
 		"Out of sight out of mind",
 		"Still waters run deep",
-		//"The Adventure Begins", 
-		//"To get lost is to learn the way",
 	];
 
 // Consturctor method 
