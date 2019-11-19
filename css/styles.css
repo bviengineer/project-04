@@ -21,6 +21,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -183,6 +184,13 @@ button.correct, input[type=submit].correct {
   right: 0;
   border-radius: 5px;
 }
+/* Win overlay */
+.win {
+  background-color: green;
+}
+h1#game-win-message, h2.header {
+  color: var(--color-heading);
+}
 
 .title {
   color: #FFF;
@@ -210,12 +218,4 @@ button.correct, input[type=submit].correct {
 
 .lose a {
   color: var(--color-lose);
-}
-
-/* Win overlay */
-.win {
-  background-color: green;
-}
-h1#game-win-message {
-  color: var(--color-heading);
 }
