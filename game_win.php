@@ -24,10 +24,10 @@
 		<h2 class="header">Phrase Hunter
 		</h2>
 		<h1 id="game-win-message">
-			<span class="congrats">Congratulations!</span> 
+			<span class="remarks">Congratulations!</span> 
 			<span class="stars">&#10024;</span><br>
-			<span id="phrase"><?php echo $_SESSION['phrase']; ?></span><br>
-			<span class="congrats">is correct!</span>
+			<span class="phrase"><?php echo $_SESSION['phrase']; ?></span><br>
+			<span class="remarks">is correct!</span>
 		
   			<form action="play.php" method="POST">
     			<input id="btn__reset" type="submit" name="start" value="Play again!" />
