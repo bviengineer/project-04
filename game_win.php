@@ -21,7 +21,7 @@
 
 	<body>
 		<div class="main-container win">    
-		<h2 class="header">Phrase Hunter
+		<h2 class="header game-overlay-header">Phrase Hunter
 		</h2>
 		<h1 id="game-win-message">
 			<span class="remarks">Congratulations!</span> 
