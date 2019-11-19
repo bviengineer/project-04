@@ -8,15 +8,15 @@ class Phrase
 	private $currentPhrase;
 	private $selected = [];
 	public $randomPhrase = [
-		"Boldness be my friend",
-		"Broken crayons still color",
-		"Carry on",
-		"Dream big",
-		"Dream without fear",
-		"Leave no stone unturned",
-		"Love without limits",
-		"Make haste",
-		"The adventure begins", 
+		"Boldness Be My Friend",
+		"Broken Crayons Still Color",
+		"Carry On",
+		"Dream Big",
+		"Dream Without Fear",
+		"Leave No Stone Unturned",
+		"Love Without Limits",
+		"Make Haste",
+		"The Adventure Begins", 
 	];
 
 // Consturctor method 
