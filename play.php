@@ -20,6 +20,7 @@
 			$_SESSION['selected'] = [];
 	}
 	// $_SESSION['phrase'] = "start small";
+	//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
