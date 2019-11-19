@@ -5,6 +5,13 @@
 	=================================================================*/
 	session_start();
 	
+	/*==================================================================
+	 Turn off Warning: Notice: Undefined index: phrase in
+	/Users/kaismapenn-titley/Documents/techdegree/project-04/play.php on line 43
+	===================================================================*/
+	error_reporting(0);
+	
+	// Include game and phrase files
 	include "inc/Game.php";
 	include "inc/Phrase.php";
 
