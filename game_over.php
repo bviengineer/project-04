@@ -20,9 +20,13 @@
 	</head>
 
 	<body>
-    <div class="main-container">
+    <div class="main-container lose-pg">
      <h2 class="header">Phrase Hunter</h2>
-      <h1 id="game-over-message">The phrase was: <?php echo $_SESSION['phrase']; ?>. Better luck next time!
+      <h1 id="game-over-message">
+        <span class="remarks fail-pg-remarks">That one was tough!</span>
+        <span class="fail-pg-emoji">&#x1F60C;</span><br>
+        <span class="phrase" id="fail-pg-phrase"><?php echo $_SESSION['phrase']; ?></span><br> 
+        <span class="remarks fail-pg-remarks">is the correct phrase.</span>
         <form action="play.php" method="POST">
           <input id="btn__reset" type="submit" name="start" value="Play again!" />
         </form>
