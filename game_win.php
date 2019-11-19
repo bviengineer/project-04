@@ -19,12 +19,12 @@
 	</head>
 
 	<body>
-<div class="main-container">    
-    <h1 id="game-over-message">Congratulations on guessing: "<?php echo $_SESSION['phrase']; ?>."</h1>
-  <form action="play.php" method="POST">
-    <input id="btn__reset" type="submit" name="start" value="Play again!" />
-  </form>
-  </div>
-</h1>
+		<div class="main-container win">    
+    	<h1 id="game-win-message">Congratulations on guessing: "<?php echo $_SESSION['phrase']; ?>"
+  			<form action="play.php" method="POST">
+    			<input id="btn__reset" type="submit" name="start" value="Play again!" />
+  			</form>
+			</h1>
+		</div>
 </body>
 </html>
