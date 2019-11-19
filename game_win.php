@@ -8,7 +8,7 @@
   }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 	<head>
 		<meta charset="utf-8">
 		<title>Phrase Hunter</title>
@@ -16,12 +16,19 @@
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/animate.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Codystar&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 		<div class="main-container win">    
-		<h2 class="header">Phrase Hunter</h2>
-    	<h1 id="game-win-message">Congratulations on guessing: "<?php echo $_SESSION['phrase']; ?>"
+		<h2 class="header">Phrase Hunter
+		</h2>
+		<h1 id="game-win-message">
+			<span class="congrats">Congratulations!</span> 
+			<span class="stars">&#10024;</span><br>
+			<span id="phrase"><?php echo $_SESSION['phrase']; ?></span><br>
+			<span class="congrats">is correct!</span>
+		
   			<form action="play.php" method="POST">
     			<input id="btn__reset" type="submit" name="start" value="Play again!" />
   			</form>
