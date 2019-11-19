@@ -20,6 +20,7 @@
 
 	<body>
 		<div class="main-container win">    
+		<h2 class="header">Phrase Hunter</h2>
     	<h1 id="game-win-message">Congratulations on guessing: "<?php echo $_SESSION['phrase']; ?>"
   			<form action="play.php" method="POST">
     			<input id="btn__reset" type="submit" name="start" value="Play again!" />
