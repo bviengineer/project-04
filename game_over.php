@@ -21,7 +21,7 @@
 
 	<body>
     <div class="main-container lose-pg">
-     <h2 class="header">Phrase Hunter</h2>
+     <h2 class="header game-overlay-header">Phrase Hunter</h2> 
       <h1 id="game-over-message">
         <span class="remarks fail-pg-remarks">That one was tough!</span>
         <span class="fail-pg-emoji">&#x1F60C;</span><br>
