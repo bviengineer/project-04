@@ -191,7 +191,7 @@ button.correct, input[type=submit].correct {
 .lose-pg {
   background-color: darkred;
 }
-h1#game-win-message, h2.header {
+h1#game-win-message, h2.game-overlay-header {
   color: var(--color-heading);
 }
 .stars, .fail-pg-emoji {
