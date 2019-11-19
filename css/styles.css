@@ -10,6 +10,7 @@
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
+  --color-heading: white; 
   --color-keys-light: #E5E5E5;
   --font-size-large: 60px;
   --font-size-medium: 20px;
@@ -209,4 +210,12 @@ button.correct, input[type=submit].correct {
 
 .lose a {
   color: var(--color-lose);
+}
+
+/* Win overlay */
+.win {
+  background-color: green;
+}
+h1#game-win-message {
+  color: var(--color-heading);
 }
