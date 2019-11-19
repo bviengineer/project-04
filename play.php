@@ -26,8 +26,6 @@
 	} else {
 			$_SESSION['selected'] = [];
 	}
-	// $_SESSION['phrase'] = "start small";
-	//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +60,7 @@
 							echo $game->displayKeyboard();
 							
 							// TESTING CURRENT PHRASE
-							var_dump($phrase->getCurrentPhrase());
+							//var_dump($phrase->getCurrentPhrase());
 						?>
 				</div>
 			</form>
