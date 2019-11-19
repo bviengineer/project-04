@@ -184,21 +184,33 @@ button.correct, input[type=submit].correct {
   right: 0;
   border-radius: 5px;
 }
-/* Win overlay */
+/* Win/loose overlays */
+.win {
+  background-color: var(--color-win);
+}
+.lose-pg {
+  background-color: darkred;
+}
 h1#game-win-message, h2.header {
   color: var(--color-heading);
 }
-.stars {
+.stars, .fail-pg-emoji {
   font-size: 4em;
 }
-.congrats {
+.remarks {
   font-size: 3em;
   letter-spacing: 5px;
   font-family: 'Codystart', cursive;
 }
-#phrase {
+.fail-pg-remarks {
+  color: azure;
+}
+.phrase {
   color: darkmagenta;
   font-size: 2em;
+}
+#fail-pg-phrase {
+  color: yellow;
 }
 
 .title {
@@ -211,10 +223,6 @@ h1#game-win-message, h2.header {
 
 .start a {
   color: #fff;
-}
-
-.win {
-  background-color: var(--color-win);
 }
 
 .win a {
