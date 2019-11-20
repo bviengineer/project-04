@@ -51,7 +51,7 @@ h1 {
 button, input[type=submit] {
   margin: 6px;
   /* border: 1px solid transparent; */
-  border: 3px solid #3a3f58;
+  border: 2px solid #3a3f58;
   padding: .5rem 1rem;
   color: var(--color-keys);
   font-size: var(--font-size-medium);
@@ -112,6 +112,7 @@ button.correct, input[type=submit].correct {
   color: black;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  border: 2px solid #3a3f58;
 }
 
 .space {
