@@ -1,5 +1,5 @@
 
-// Get all buttons form the play.php page
+// Get all buttons from the play.php page
 let buttons = document.getElementsByClassName('key');
 
 // Variable to hold user keypress
@@ -9,11 +9,11 @@ let keypress = "";
 document.addEventListener('keydown', logKey);
 
 /*============================================================================================================
-  > Function is called when the user presses a key on the keyboad.
-  > The keypress is then assigned to the keypress variable.
+  > Function is called when the user presses a key on the keyboard
+  > The keypress is then assigned to the keypress variable
   > e is the event and key is an attribute on the e event that holds the letter value from the keyboard
   > The buttons, stored in buttons variable above, are then looped through and one at a time, EACH ONE 
-    is assinged to the local variable keypress.
+    is assinged to the variable keypress
   > The keypress text is then converted to lowercase
   > Then, the value or text stored in keypress, is compared to the value on the button on the page to see if
     there is a match
