@@ -8,17 +8,16 @@ class Phrase
 	private $currentPhrase;
 	private $selected = [];
 	public $randomPhrase = [
-		"Broken Crayons Still Color",
+		"Broken crayons still color",
 		"Carry on",
 		"Count your blessings",
-		"Dream Big",
+		"Dream big",
 		"Go the extra mile",
 		"Leave no stone unturned",
 		"Less is more",
 		"Love without limits",
 		"Make haste",
 		"Manners maketh man",
-		"No one can serve two masters",
 		"Out of sight out of mind",
 		"Still waters run deep",
 	];
