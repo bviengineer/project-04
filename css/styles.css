@@ -142,7 +142,7 @@ button.correct, input[type=submit].correct {
 
 .chosen {
   /* background: #3a3f58; */
-  background: green;
+  background:lightgreen;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
@@ -151,7 +151,7 @@ button.correct, input[type=submit].correct {
 .wrong {
   /* background: #f7a964; */
   color: #FFFFFF;
-  background: red;
+  background: lightcoral;
   color: lavenderblush;
 }
 
