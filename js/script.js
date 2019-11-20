@@ -24,7 +24,7 @@ function logKey(e) {
   for (let i=0; i <= buttons.length - 1; i++) {
     let theButton = buttons[i].innerText;
     keypress = keypress.toLocaleLowerCase();
-      if (keypress.toLowerCase() === theButton) {
+      if (keypress === theButton) {
           buttons[i].click();
       }
     }
