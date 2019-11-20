@@ -50,16 +50,18 @@ h1 {
 
 button, input[type=submit] {
   margin: 6px;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
+  border: 3px solid #3a3f58;
   padding: .5rem 1rem;
   color: var(--color-keys);
   font-size: var(--font-size-medium);
   background-color: var(--color-keys-light);
+  /* background-image: url("https://cdn.pixabay.com/photo/2017/10/04/07/43/autumn-2815427__340.jpg"); */
   border-radius: 5px;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-  cursor: pointer;
+  cursor: pointer; 
 }
 button.incorrect, input[type=submit].incorrect {
   background-color: var(--color-lose);
