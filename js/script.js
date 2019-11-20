@@ -12,11 +12,11 @@ document.addEventListener('keydown', logKey);
   > Function is called when the user presses a key on the keyboard
   > The keypress is then assigned to the keypress variable
   > e is the event and key is an attribute on the e event that holds the letter value from the keyboard
-  > The buttons, stored in buttons variable above, are then looped through and one at a time, EACH ONE 
-    is assinged to the variable keypress
-  > The keypress text is then converted to lowercase
-  > Then, the value or text stored in keypress, is compared to the value on the button on the page to see if
-    there is a match
+  > The buttons, stored in buttons variable above, are then looped through and one at a time
+      > EACH ONE then get's a turn being stored inside the local variable theButton
+  > The value in the keypress variable which is the letter hte user pressed on the keyboard, is then converted to           lowercase and assinged back into itself (keypress)
+  > Then, the value or text stored in keypress, is compared to the value on the button on the page which is in the 
+      variable theButton, to see if there is a match
   > If there is a match, a click event is emulated on the button which triggers the PHP side of the application
  ===============================================================================================================*/
 function logKey(e) {
