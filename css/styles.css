@@ -141,15 +141,18 @@ button.correct, input[type=submit].correct {
 }
 
 .chosen {
-  background: #3a3f58;
+  /* background: #3a3f58; */
+  background: green;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
+  /* background: #f7a964; */
   color: #FFFFFF;
+  background: red;
+  color: lavenderblush;
 }
 
 .btn__reset {
