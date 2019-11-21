@@ -72,7 +72,7 @@ button.correct, input[type=submit].correct {
 #btn__reset {
 	width: 200px;
   margin: 0 auto;
-  color: cadetblue;
+  color: chocolate;
 }
 
 .main-container {
@@ -99,9 +99,15 @@ button.correct, input[type=submit].correct {
   color: #3a3f58;
 }
 
-.start-page-header {
+.start-page-header, .game-pg-header {
   color: white;
   font-size: 5em;
+}
+
+.game-title {
+  font-family: 'Codystart', cursive;
+  color: floralwhite;
+  font-size: 3em;
 }
 
 /* Phrase */
