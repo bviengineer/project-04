@@ -13,7 +13,7 @@ Base files were provided and included HTML, CSS, game board hearts, sample quote
 
 Background image obtained from **Pixabay**. No attribution is required but is mentioned out of courtesy.
  Image by [Pexels](https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1850417) 
- from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1850417)
+ from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1850417).
 
 Background image CSS rules obtained from **W3Schools** and can be found [here](https://www.w3schools.com/howto/howto_css_full_page.asp).
 
