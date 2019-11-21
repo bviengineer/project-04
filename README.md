@@ -11,8 +11,8 @@ For each guess, the web app compares the player selection with the random phrase
 ### Project Sources
 Base files were provided and included HTML, CSS, game board hearts and sample quotes, some of which remained in the game. Additional quotes were added. The look, feel and theme of the application has been modified to suit the developer's personal style.
 
-Background image obtained from Pixabay.com; no attribution is required but is mentioned.
- Image by [Pexels]("https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1850417") 
+Background image obtained from **Pixabay**. No attribution is required but is mentioned.
+ Image by [Pexels](https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1850417) 
  from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1850417)
 
 ### To Play
