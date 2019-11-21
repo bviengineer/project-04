@@ -18,7 +18,7 @@ Background image obtained from **Pixabay**. No attribution is required but is me
 Background image CSS rules obtained from **W3Schools** and can be found [here](https://www.w3schools.com/howto/howto_css_full_page.asp).
 
 ### To Play
-Download the project files or clone the repository. With MAMP or similar tool running, navigate to the `index.php` page from your browser of choice and click on start game. You may use the keyboard or mouse to select the letters on the onscreen keybaord 
+Download the project files or clone the repository. With MAMP or similar tool running, navigate to the `index.php` page from your browser of choice and click on start game. You may use the keyboard or mouse to select the letters on the onscreen keybaord. 
 
 ### Screen shots
 
