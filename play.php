@@ -39,7 +39,7 @@
 	</head>
 	<body class="bg">
 		<div class="main-container">
-			<h2 class="header">Phrase Hunter</h2>
+			<h2 class="header game-pg-header">Phrase Hunter</h2>
 			<?php 
 				// Instantiation of Phrase class
 				$phrase = new Phrase($_SESSION['phrase'], $_SESSION['selected']);
