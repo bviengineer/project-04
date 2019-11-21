@@ -10,3 +10,11 @@ Base files were provided and included HTML, CSS, game board hearts and sample qu
 
 ### To Play
 Download the project files or clone the repository. With MAMP or similar tool running, navigate to the `index.php` page from your browser of choice and click on start game. You may use the keyboard or mouse to select the letters on the onscreen keybaord 
+
+### Screen shots
+
+#### Start page
+![start page](images/start_page.png)
+
+#### Game board
+![game board](images/game_board.png)
