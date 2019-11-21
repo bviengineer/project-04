@@ -12,6 +12,7 @@
 	<body class="bg">
 		<div class="main-container">
 			<h2 class="header start-page-header">Phrase Hunter</h2>
+			<h3 class="game-title"> "Wise beyond your years"</h3>
 				<form action="play.php" method="POST">
 						<input id="btn__reset" type="submit" name="start" value="Start Game" />
 				</form>
