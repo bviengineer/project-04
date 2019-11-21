@@ -56,7 +56,6 @@ button, input[type=submit] {
   color: var(--color-keys);
   font-size: var(--font-size-medium);
   background-color: var(--color-keys-light);
-  /* background-image: url("https://cdn.pixabay.com/photo/2017/10/04/07/43/autumn-2815427__340.jpg"); */
   border-radius: 5px;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
@@ -72,7 +71,8 @@ button.correct, input[type=submit].correct {
 
 #btn__reset {
 	width: 200px;
-	margin: 0 auto;
+  margin: 0 auto;
+  color: cadetblue;
 }
 
 .main-container {
@@ -99,6 +99,10 @@ button.correct, input[type=submit].correct {
   color: #3a3f58;
 }
 
+.start-page-header {
+  color: white;
+  font-size: 5em;
+}
 
 /* Phrase */
 
