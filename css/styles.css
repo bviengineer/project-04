@@ -266,7 +266,8 @@ body, html {
   height: 100%;
 }
 .bg {
-  background-image: url("https://pixabay.com/get/57e8d0434e53ab14ea9d8274c429367e1422dfe05455724b722a72d2/abstract-1850417.jpg");
+  /* background-image: url("https://pixabay.com/get/57e8d0434e53ab14ea9d8274c429367e1422dfe05455724b722a72d2/abstract-1850417.jpg"); */
+  background-image: url("/../images/abstract-1850417.jpg");
   
   /* Full height */
   height: 100%;
